@@ -38,39 +38,39 @@ export default function Bandcamp() {
           Escucha, descarga y apoya a los artistas en Bandcamp
         </p>
 
-        <div className="mx-auto flex max-w-[700px] items-center gap-3">
+        <div className="mx-auto max-w-[700px] rounded-lg border border-[#2a2a4a]">
+          <iframe
+            key={album.id}
+            style={{ border: 0, width: "100%", height: 470 }}
+            src={`https://bandcamp.com/EmbeddedPlayer/album=${album.id}/size=large/bgcol=0a0a0f/linkcol=ff00ff/tracklist=true/transparent=true/`}
+            seamless
+            title={`${album.title} en Bandcamp`}
+          />
+        </div>
+
+        <div className="mt-4 flex items-center justify-center gap-4">
           <button
             onClick={prev}
-            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#2a2a4a] text-[#8888aa] transition-all hover:border-[#ff00ff] hover:text-[#ff00ff]"
+            className="flex h-8 w-8 items-center justify-center rounded-full border border-[#2a2a4a] text-[#8888aa] transition-all hover:border-[#ff00ff] hover:text-[#ff00ff]"
             aria-label="Anterior"
           >
             <ArrowSVG direction="left" />
           </button>
 
-          <div className="w-full rounded-lg border border-[#2a2a4a]">
-            <iframe
-              key={album.id}
-              style={{ border: 0, width: "100%", height: 620 }}
-              src={`https://bandcamp.com/EmbeddedPlayer/album=${album.id}/size=large/bgcol=0a0a0f/linkcol=ff00ff/tracklist=true/transparent=true/`}
-              seamless
-              title={`${album.title} en Bandcamp`}
-            />
-          </div>
+          <span className="text-sm text-[#c0c0d0]">
+            <span className="text-[#ff00ff]">{album.title}</span>
+            {" — "}
+            <span className="text-[#00ffff]">{album.artist}</span>
+          </span>
 
           <button
             onClick={next}
-            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#2a2a4a] text-[#8888aa] transition-all hover:border-[#ff00ff] hover:text-[#ff00ff]"
+            className="flex h-8 w-8 items-center justify-center rounded-full border border-[#2a2a4a] text-[#8888aa] transition-all hover:border-[#ff00ff] hover:text-[#ff00ff]"
             aria-label="Siguiente"
           >
             <ArrowSVG direction="right" />
           </button>
         </div>
-
-        <p className="mt-4 text-sm text-[#c0c0d0]">
-          <span className="text-[#ff00ff]">{album.title}</span>
-          {" — "}
-          <span className="text-[#00ffff]">{album.artist}</span>
-        </p>
 
         <div className="mt-3 flex items-center justify-center gap-2">
           {albums.map((_, i) => (
