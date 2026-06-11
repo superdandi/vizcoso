@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Servicios from "@/components/Servicios";
+import Equipamiento from "@/components/Equipamiento";
 import SalaEnsayo from "@/components/SalaEnsayo";
 import Clases from "@/components/Clases";
 import VideoProduccion from "@/components/VideoProduccion";
@@ -17,6 +18,7 @@ export default function Home() {
       <main>
         <Hero />
         <Servicios />
+        <Equipamiento />
         <SalaEnsayo />
         <Clases />
         <VideoProduccion />
