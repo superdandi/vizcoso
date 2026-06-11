@@ -47,10 +47,10 @@ export default function Bandcamp() {
             <ArrowSVG direction="left" />
           </button>
 
-          <div className="w-full overflow-hidden rounded-lg border border-[#2a2a4a]">
+          <div className="w-full rounded-lg border border-[#2a2a4a]">
             <iframe
               key={album.id}
-              style={{ border: 0, width: "100%", height: 470 }}
+              style={{ border: 0, width: "100%", height: 620 }}
               src={`https://bandcamp.com/EmbeddedPlayer/album=${album.id}/size=large/bgcol=0a0a0f/linkcol=ff00ff/tracklist=true/transparent=true/`}
               seamless
               title={`${album.title} en Bandcamp`}
