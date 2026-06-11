@@ -42,7 +42,7 @@ export default function Bandcamp() {
           <iframe
             key={album.id}
             style={{ border: 0, width: "100%", height: 620 }}
-            src={`https://bandcamp.com/EmbeddedPlayer/album=${album.id}/size=large/bgcol=0a0a0f/linkcol=ff00ff/tracklist=true/transparent=true/`}
+            src={`https://bandcamp.com/EmbeddedPlayer/album=${album.id}/size=large/bgcol=0a0a0f/linkcol=ff00ff/tracklist=false/transparent=true/`}
             seamless
             title={`${album.title} en Bandcamp`}
           />
