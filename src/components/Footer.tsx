@@ -74,7 +74,7 @@ export default function Footer() {
           Chile
         </p>
         <p className="mt-1 text-xs text-[#444]">
-          Cultural Management &bull; AV PRODUCTION
+          Gestión Cultural &bull; Producción Musical &amp; Audiovisual
         </p>
       </div>
     </footer>

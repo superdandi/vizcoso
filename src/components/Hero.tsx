@@ -14,7 +14,7 @@ export default function Hero() {
 
       <div className="relative z-10 text-center">
         <p className="mb-2 text-sm tracking-[0.3em] text-[#8888aa]">
-          CULTURAL MANAGEMENT &bull; AV PRODUCTION
+            GESTIÓN CULTURAL &bull; PRODUCCIÓN MUSICAL &amp; AUDIOVISUAL
         </p>
 
         <h1 className="relative">
