@@ -38,10 +38,10 @@ export default function Bandcamp() {
           Escucha, descarga y apoya a los artistas en Bandcamp
         </p>
 
-          <div className="mx-auto max-w-[700px] overflow-hidden rounded-lg border border-[#2a2a4a]">
+          <div className="mx-auto max-w-[700px] rounded-lg border border-[#2a2a4a]">
           <iframe
             key={album.id}
-              style={{ border: 0, width: "100%", minHeight: 750 }}
+              style={{ border: 0, width: "100%", height: 470 }}
             src={`https://bandcamp.com/EmbeddedPlayer/album=${album.id}/size=large/bgcol=0a0a0f/linkcol=ff00ff/tracklist=false/transparent=true/`}
             seamless
             title={`${album.title} en Bandcamp`}
