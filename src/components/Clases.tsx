@@ -5,7 +5,7 @@ export default function Clases() {
     <section id="clases" className="px-4 py-24">
       <div className="mx-auto max-w-4xl">
         <h2 className="glow-cyan mb-2 text-center text-3xl font-bold sm:text-4xl">
-          Clases de Música
+          Formación Musical
         </h2>
         <p className="mb-12 text-center text-[#8888aa]">
           Aprende con un instructor comprometido y apasionado
