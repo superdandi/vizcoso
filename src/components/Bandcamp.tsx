@@ -41,7 +41,7 @@ export default function Bandcamp() {
           <div className="mx-auto max-w-[700px] overflow-hidden rounded-lg border border-[#2a2a4a]">
           <iframe
             key={album.id}
-            style={{ border: 0, width: "100%", height: 750 }}
+              style={{ border: 0, width: "100%", minHeight: 750 }}
             src={`https://bandcamp.com/EmbeddedPlayer/album=${album.id}/size=large/bgcol=0a0a0f/linkcol=ff00ff/tracklist=false/transparent=true/`}
             seamless
             title={`${album.title} en Bandcamp`}
