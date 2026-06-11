@@ -9,7 +9,7 @@ export default function Bandcamp() {
           Sello VIZCOSO
         </h2>
         <p className="mb-10 text-[#8888aa]">
-          Descubre el catálogo musical en Bandcamp
+          Escucha, descarga y apoya a los artistas en Bandcamp
         </p>
 
         <div className="mx-auto max-w-[700px] overflow-hidden rounded-lg border border-[#2a2a4a]">
@@ -27,7 +27,7 @@ export default function Bandcamp() {
           rel="noopener noreferrer"
           className="mt-6 inline-block text-sm text-[#00ffff] transition-colors hover:text-[#ff00ff]"
         >
-          Ver catálogo completo →
+          Descubre el catálogo musical completo en Bandcamp →
         </a>
       </div>
     </section>
