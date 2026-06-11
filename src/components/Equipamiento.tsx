@@ -23,15 +23,16 @@ export default function Equipamiento() {
                 Tascam Model 24
               </h3>
               <p className="mt-1 text-sm leading-relaxed text-[#c0c0d0]">
-                Conectada a mi <strong className="text-[#ffaa00]">Mac Mini M4 (2025)</strong> como interfaz USB,
-                graba hasta <strong className="text-[#ff00ff]">24 canales simultáneos</strong>{" "}
+                Grabamos usando la interfaz USB de la <strong className="text-[#00ffff]">Tascam Model 24</strong>{" "}
+                conectada a un <strong className="text-[#ffaa00]">Mac Mini M4</strong>, capturando hasta{" "}
+                <strong className="text-[#ff00ff]">24 canales simultáneos</strong>{" "}
                 (22 entradas + mezcla estéreo) en{" "}
                 <strong className="text-[#ff00ff]">WAV 44.1 o 48 kHz / 24-bit</strong>.
                 Sus <strong className="text-[#00ffff]">faders de 100 mm (long-throw)</strong> y su amplio layout
-                (57 cm de ancho) hacen que mezclar sea cómodo y preciso.
-                16 preamplificadores Tascam Ultra-HDDA, EQ de 3 bandas con medio sweepable,
-                compresor one-knob y 16 efectos integrados. También puedo operarla independiente
-                sin computador, grabando directo a tarjeta SD (hasta 512 GB).
+                (57 cm) hacen que mezclar sea cómodo y preciso. 16 preamplificadores Ultra-HDDA,
+                EQ sweepable, compresor one-knob y 16 efectos. Además contamos con un{" "}
+                <strong className="text-[#ffaa00]">Lexicon MX200</strong> (multiefectos) y un{" "}
+                <strong className="text-[#ffaa00]">DBX 166XS</strong> (compresor analógico de 2 canales).
               </p>
             </div>
           </div>
@@ -41,45 +42,35 @@ export default function Equipamiento() {
           <div className="rounded-lg border border-[#2a2a4a] bg-[#0a0a0f] p-6 transition-all hover:border-[#ff00ff]/50">
             <h4 className="mb-2 text-lg font-bold text-[#ff00ff]">🎤 Vocal &amp; Instrumento</h4>
             <p className="text-sm leading-relaxed text-[#c0c0d0]">
-              <strong>El primer paso.</strong> Ven a grabar tu voz o tu instrumento.
-              Contamos con micrófonos <strong className="text-[#00ffff]">Shure SM58</strong> (x3), dinámicos
-              y condensadores para voces e instrumentos, además de{" "}
-              <strong className="text-[#ffaa00]">cajas directas (DI)</strong> para conectar guitarras,
-              bajos y teclados directo a la mesa. Desde una maqueta hasta una producción
-              urbana, partimos con un canal y de ahí crecemos.
+              Graba tu voz o instrumento con micrófonos <strong className="text-[#00ffff]">Shure SM58</strong>,
+              dinámicos y condensadores, más <strong className="text-[#ffaa00]">cajas DI</strong> para guitarra,
+              bajo o teclado directo a la mesa. Ideal para maquetas y producción urbana.
             </p>
           </div>
 
           <div className="rounded-lg border border-[#2a2a4a] bg-[#0a0a0f] p-6 transition-all hover:border-[#ff00ff]/50">
             <h4 className="mb-2 text-lg font-bold text-[#ffaa00]">🥁 Batería completa</h4>
             <p className="text-sm leading-relaxed text-[#c0c0d0]">
-              <strong>Subimos de nivel.</strong> Microfonear una batería requiere canales,
-              y la Model 24 tiene 24. Acá entra el{" "}
-              <strong className="text-[#00ffff]">Shure PGADrumKit 7</strong>:{" "}
-              1x PGA52 (kick), 3x PGA56 (toms), 1x PGA57 (snare) +{" "}
-              <strong className="text-[#ff00ff]">2x PGA81 condensador</strong> como overheads
-              (40 Hz – 18 kHz). Cada pieza suena en su propio canal. Por eso invertimos
-              en una mesa grande: para que tu batería suene completa, separada y con la
-              pegada que merece.
+              Microfonía profesional con <strong className="text-[#00ffff]">Shure PGADrumKit 7</strong>:{" "}
+              PGA52 (kick), PGA56×3 (toms), PGA57 (snare) y{" "}
+              <strong className="text-[#ff00ff]">PGA81×2</strong> overheads condensador (40 Hz – 18 kHz).
+              Cada pieza en su propio canal, gracias a los 24 de la Model 24.
             </p>
           </div>
 
           <div className="rounded-lg border border-[#2a2a4a] bg-[#0a0a0f] p-6 transition-all hover:border-[#ff00ff]/50">
             <h4 className="mb-2 text-lg font-bold text-[#00ffff]">🎸 Banda completa</h4>
             <p className="text-sm leading-relaxed text-[#c0c0d0]">
-              <strong>Todos los instrumentos, todos los canales.</strong> Con la micrófonía
-              de voces, la batería microfonada y las DI conectadas, grabamos a la banda
-              completa como sesión en vivo. Cada músico, cada instrumento, suena limpio
-              y por separado. Listo para mezclar.
+              Voces, batería microfonada y DI conectadas simultáneamente. La banda completa
+              grabada como sesión en vivo, cada instrumento separado y limpio.
             </p>
           </div>
 
           <div className="rounded-lg border border-[#2a2a4a] bg-[#0a0a0f] p-6 transition-all hover:border-[#ff00ff]/50">
             <h4 className="mb-2 text-lg font-bold text-[#ff00ff]">📡 Banda + Live Streaming</h4>
             <p className="text-sm leading-relaxed text-[#c0c0d0]">
-              <strong>El proyecto completo.</strong> Todo lo anterior, pero mientras grabamos
-              también transmitimos en vivo. La banda tocando, cada canal capturado, y el
-              mundo escuchando en tiempo real. Sesión, grabación y streaming simultáneo.
+              Todo lo anterior mientras transmitimos en vivo. La banda tocando, cada canal
+              capturado y el mundo escuchando en tiempo real.
             </p>
           </div>
         </div>
