@@ -10,6 +10,9 @@ export default function VideoProduccion() {
         <p className="mb-12 text-center text-[#8888aa]">
           Capturamos tu arte en movimiento
         </p>
+        <p className="mb-10 text-center text-sm tracking-[0.15em] text-[#ffaa00]">
+          MULTICAM &middot; HD &middot; Full HD &middot; 4K &middot; HDR &middot; 44.1K &middot; 48K &middot; 24b &middot; Stereo
+        </p>
 
         <div className="grid gap-6 sm:grid-cols-2">
           {videoServicios.map((v, i) => (

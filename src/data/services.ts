@@ -70,20 +70,20 @@ export const clasesMusica: ClassItem[] = [
 
 export const videoServicios: VideoService[] = [
   {
-    title: "Emisiones en directo",
-    price: "Desde $25.000 CLP",
-    note: "valor por hora",
-  },
-  {
-    title: "Producción de vídeos de eventos",
-    price: "Desde $180.000 CLP",
-  },
-  {
     title: "Producción de vídeos musicales",
     price: "Desde $250.000 CLP",
   },
   {
     title: "Producción de video sesión banda en vivo",
     price: "Desde $210.000 CLP",
+  },
+  {
+    title: "Producción de vídeos de eventos",
+    price: "Desde $180.000 CLP",
+  },
+  {
+    title: "Transmisión en directo",
+    price: "Desde $25.000 CLP",
+    note: "valor por hora",
   },
 ];
