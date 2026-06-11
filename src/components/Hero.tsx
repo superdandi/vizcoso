@@ -27,8 +27,7 @@ export default function Hero() {
         </h1>
 
         <p className="mt-4 max-w-xl text-lg text-[#8888aa]">
-          Estudio de grabación &bull; Sala de ensayo &bull; Clases musicales
-          &bull; Producción audiovisual
+          Estudio de grabación &bull; Salas de ensayo &bull; Formación musical
         </p>
 
         <p className="mt-1 text-sm text-[#ffaa00]">Talca, Chile</p>
