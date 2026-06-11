@@ -8,7 +8,7 @@ export default function Clases() {
           Formación Musical
         </h2>
         <p className="mb-12 text-center text-[#8888aa]">
-          Aprende con un instructor comprometido y apasionado
+          Clases presenciales personalizadas para todos los niveles
         </p>
 
         <div className="overflow-hidden rounded-lg border border-[#2a2a4a]">

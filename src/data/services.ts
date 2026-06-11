@@ -58,14 +58,14 @@ export const salaEnsayo = {
 };
 
 export const clasesMusica: ClassItem[] = [
-  { name: "Guitarra", price: "$15.000 CLP" },
   { name: "Canto", price: "$25.000 CLP" },
+  { name: "Guitarra", price: "$15.000 CLP" },
   { name: "Piano", price: "$15.000 CLP" },
   { name: "Saxo", price: "$15.000 CLP" },
   { name: "Bajo", price: "$15.000 CLP" },
   { name: "Batería", price: "$15.000 CLP" },
-  { name: "Ableton Live", price: "$20.000 CLP" },
   { name: "Producción musical", price: "$20.000 CLP" },
+  { name: "Ableton Live", price: "$20.000 CLP" },
 ];
 
 export const videoServicios: VideoService[] = [
