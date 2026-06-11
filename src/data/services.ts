@@ -18,20 +18,19 @@ export interface VideoService {
 
 export const serviciosGrabacion: Service[] = [
   {
+    title: "Grabación maqueta vocal",
+    description: "1 hora de estudio",
+    price: "Desde $15.000 CLP",
+  },
+  {
+    title: "Grabación vocal o instrumental",
+    description: "2 horas de estudio",
+    price: "Desde $40.000 CLP",
+  },
+  {
     title: "Grabación sesión banda en vivo multipista",
     description: "Grabación profesional de tu banda en vivo, múltiples pistas",
     price: "Desde $50.000 CLP",
-  },
-  {
-    title: "Grabación multipista en locaciones",
-    description: "Grabación fuera del estudio",
-    price: "Desde $200.000 CLP",
-    note: "No incluye transporte, catering o alojamiento",
-  },
-  {
-    title: "Grabación voces para producción urbana",
-    description: "2 horas de estudio",
-    price: "Desde $40.000 CLP",
   },
   {
     title: "Grabación Mezcla y Master producción urbano",
@@ -44,9 +43,10 @@ export const serviciosGrabacion: Service[] = [
     price: "Desde $150.000 CLP",
   },
   {
-    title: "Grabación maqueta vocal",
-    description: "1 hora de estudio",
-    price: "Desde $15.000 CLP",
+    title: "Grabación multipista en locaciones",
+    description: "Grabación fuera del estudio",
+    price: "Desde $200.000 CLP",
+    note: "No incluye transporte, catering o alojamiento",
   },
 ];
 
