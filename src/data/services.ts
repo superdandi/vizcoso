@@ -29,7 +29,8 @@ export const serviciosGrabacion: Service[] = [
   },
   {
     title: "Grabación sesión banda en vivo multipista",
-    description: "Grabación profesional de tu banda en vivo, múltiples pistas",
+    description: "2 horas de estudio",
+    note: "Grabación profesional de tu banda en vivo, múltiples pistas",
     price: "Desde $50.000 CLP",
   },
   {
