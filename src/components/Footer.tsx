@@ -40,7 +40,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://instagram.com/vizcoso"
+            href="https://instagram.com/vizcosoentertainment"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#8888aa] transition-colors hover:text-[#ff00ff]"

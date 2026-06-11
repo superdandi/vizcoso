@@ -15,7 +15,7 @@ export default function Bandcamp() {
         <div className="mx-auto max-w-[700px] overflow-hidden rounded-lg border border-[#2a2a4a]">
           <iframe
             style={{ border: 0, width: "100%", height: 470 }}
-            src="https://bandcamp.com/EmbeddedPlayer/album=768269688/size=large/bgcol=0a0a0f/linkcol=ff00ff/tracklist=false/transparent=true/"
+            src="https://bandcamp.com/EmbeddedPlayer/album=1993582687/size=large/bgcol=0a0a0f/linkcol=ff00ff/tracklist=true/transparent=true/"
             seamless
             title="VIZCOSO en Bandcamp"
           />
