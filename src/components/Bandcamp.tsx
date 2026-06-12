@@ -102,7 +102,7 @@ export default function Bandcamp() {
                       i !== current ? "pointer-events-none opacity-0" : ""
                     }`}
                     style={{ height: 700 }}
-                    src={`https://bandcamp.com/EmbeddedPlayer/album=${a.id}/size=large/bgcol=0a0a0f/linkcol=ff00ff/tracklist=true/transparent=true/`}
+                    src={i === current ? `https://bandcamp.com/EmbeddedPlayer/album=${a.id}/size=large/bgcol=0a0a0f/linkcol=ff00ff/tracklist=true/transparent=true/` : "about:blank"}
                     seamless
                     title={`${a.title} en Bandcamp`}
                   />
