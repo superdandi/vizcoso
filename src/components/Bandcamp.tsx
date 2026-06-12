@@ -96,20 +96,24 @@ export default function Bandcamp() {
                     : ""
                 }`}
               >
-                {i === current ? (
+                <div className="relative h-[700px]">
                   <iframe
-                    style={{ border: 0, width: "100%", height: 700 }}
+                    className={`absolute inset-0 w-full border-0 ${
+                      i !== current ? "pointer-events-none opacity-0" : ""
+                    }`}
+                    style={{ height: 700 }}
                     src={`https://bandcamp.com/EmbeddedPlayer/album=${a.id}/size=large/bgcol=0a0a0f/linkcol=ff00ff/tracklist=true/transparent=true/`}
                     seamless
                     title={`${a.title} en Bandcamp`}
                   />
-                ) : (
                   <img
                     src={a.artUrl}
                     alt={a.title}
-                    className="h-[700px] w-full object-cover"
+                    className={`absolute inset-0 h-full w-full object-cover ${
+                      i === current ? "pointer-events-none opacity-0" : ""
+                    }`}
                   />
-                )}
+                </div>
               </CarouselItem>
             ))}
           </CarouselContent>
