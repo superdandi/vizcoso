@@ -1,3 +1,4 @@
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { salaEnsayo } from "@/data/services";
 
 const ParkingIcon = () => (
@@ -76,7 +77,8 @@ const amenities = [
 
 export default function SalaEnsayo() {
   return (
-    <section className="border-y border-[#2a2a4a] px-4 py-20">
+    <section className="border-t border-[#2a2a4a] px-4 py-20">
+      <AnimateOnScroll>
       <div className="mx-auto max-w-4xl text-center">
         <h2 className="glow-magenta mb-4 text-3xl font-bold sm:text-4xl">
           {salaEnsayo.title}
@@ -114,6 +116,7 @@ export default function SalaEnsayo() {
           Climatizado &bull; Equipo incluido &bull; Ambiente acogedor
         </p>
       </div>
+      </AnimateOnScroll>
     </section>
   );
 }

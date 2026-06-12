@@ -1,8 +1,10 @@
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { reviews } from "@/data/reviews";
 
 export default function Reviews() {
   return (
-    <section id="reviews" className="px-4 py-24">
+    <section id="reviews" className="border-t border-[#2a2a4a] px-4 py-24">
+      <AnimateOnScroll>
       <div className="mx-auto max-w-6xl">
         <h2 className="glow-cyan mb-2 text-center text-3xl font-bold sm:text-4xl">
           Opiniones
@@ -43,6 +45,7 @@ export default function Reviews() {
           Basado en 15 opiniones en Google &mdash; Calificación promedio: 5.0 ★
         </p>
       </div>
+      </AnimateOnScroll>
     </section>
   );
 }

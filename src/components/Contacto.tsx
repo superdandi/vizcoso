@@ -1,9 +1,12 @@
+import AnimateOnScroll from "@/components/AnimateOnScroll";
+
 export default function Contacto() {
   return (
     <section
       id="contacto"
-      className="border-y border-[#2a2a4a] px-4 py-24"
+      className="border-t border-[#2a2a4a] px-4 py-24"
     >
+      <AnimateOnScroll>
       <div className="mx-auto max-w-4xl text-center">
         <h2 className="glow-magenta mb-2 text-3xl font-bold sm:text-4xl">
           Contáctame
@@ -49,6 +52,7 @@ export default function Contacto() {
           </p>
         </div>
       </div>
+      </AnimateOnScroll>
     </section>
   );
 }

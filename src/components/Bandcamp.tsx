@@ -8,6 +8,7 @@ import {
   useCarousel,
   type CarouselApi,
 } from "@/components/ui/carousel";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 const albums = [
   { id: 1993582687, title: "El Estilo de la Vieja en la Nueva Escuela", artist: "YOU VANNI", artUrl: "https://f4.bcbits.com/img/a3095031764_16.jpg" },
@@ -72,8 +73,9 @@ export default function Bandcamp() {
   }, [api, onSelect]);
 
   return (
-    <section id="bandcamp" className="border-y border-[#2a2a4a] px-4 py-24">
-      <div className="mx-auto max-w-4xl text-center">
+    <section id="bandcamp" className="border-t border-[#2a2a4a] px-4 py-24">
+      <AnimateOnScroll>
+        <div className="mx-auto max-w-4xl text-center">
         <h2 className="glow-magenta mb-2 text-3xl font-bold sm:text-4xl">
           Sello VIZCOSO
         </h2>
@@ -129,6 +131,7 @@ export default function Bandcamp() {
           Descubre el catálogo musical completo en Bandcamp →
         </a>
       </div>
+      </AnimateOnScroll>
     </section>
   );
 }

@@ -1,8 +1,10 @@
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { videoServicios } from "@/data/services";
 
 export default function VideoProduccion() {
   return (
-    <section id="video" className="border-y border-[#2a2a4a] px-4 py-24">
+    <section id="video" className="border-t border-[#2a2a4a] px-4 py-24">
+      <AnimateOnScroll>
       <div className="mx-auto max-w-6xl">
         <h2 className="glow-magenta mb-2 text-center text-3xl font-bold sm:text-4xl">
           Producción de Video
@@ -28,6 +30,7 @@ export default function VideoProduccion() {
           ))}
         </div>
       </div>
+      </AnimateOnScroll>
     </section>
   );
 }

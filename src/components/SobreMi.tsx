@@ -1,6 +1,9 @@
+import AnimateOnScroll from "@/components/AnimateOnScroll";
+
 export default function SobreMi() {
   return (
-    <section id="sobre-mi" className="px-4 py-24">
+    <section id="sobre-mi" className="border-t border-[#2a2a4a] px-4 py-24">
+      <AnimateOnScroll>
       <div className="mx-auto max-w-4xl">
         <h2 className="glow-cyan mb-2 text-center text-3xl font-bold sm:text-4xl">
           Sobre Mí
@@ -34,6 +37,7 @@ export default function SobreMi() {
           </p>
         </div>
       </div>
+      </AnimateOnScroll>
     </section>
   );
 }

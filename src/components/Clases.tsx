@@ -1,8 +1,10 @@
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { clasesMusica } from "@/data/services";
 
 export default function Clases() {
   return (
-    <section id="clases" className="px-4 py-24">
+    <section id="clases" className="border-t border-[#2a2a4a] px-4 py-24">
+      <AnimateOnScroll>
       <div className="mx-auto max-w-4xl">
         <h2 className="glow-cyan mb-2 text-center text-3xl font-bold sm:text-4xl">
           Formación Musical
@@ -29,6 +31,7 @@ export default function Clases() {
           Valor por hora &bull; Clases presenciales en Talca
         </p>
       </div>
+      </AnimateOnScroll>
     </section>
   );
 }

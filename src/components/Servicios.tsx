@@ -1,9 +1,11 @@
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { serviciosGrabacion } from "@/data/services";
 
 export default function Servicios() {
   return (
-    <section id="servicios" className="px-4 py-24">
-      <div className="mx-auto max-w-6xl">
+    <section id="servicios" className="border-t border-[#2a2a4a] px-4 py-24">
+      <AnimateOnScroll>
+        <div className="mx-auto max-w-6xl">
         <h2 className="glow-cyan mb-2 text-center text-3xl font-bold sm:text-4xl">
           Servicios de Grabación
         </h2>
@@ -26,6 +28,7 @@ export default function Servicios() {
           ))}
         </div>
       </div>
+      </AnimateOnScroll>
     </section>
   );
 }
