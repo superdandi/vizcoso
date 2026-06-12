@@ -23,10 +23,14 @@ function ArrowSVG({ direction }: { direction: "left" | "right" }) {
 
 export default function Bandcamp() {
   const [current, setCurrent] = useState(0);
-  const album = albums[current];
+
+  const getAlbum = (offset: number) =>
+    albums[(current + offset + albums.length) % albums.length];
 
   const prev = () => setCurrent((c) => (c === 0 ? albums.length - 1 : c - 1));
   const next = () => setCurrent((c) => (c === albums.length - 1 ? 0 : c + 1));
+
+  const PEEK = 60;
 
   return (
     <section id="bandcamp" className="border-y border-[#2a2a4a] px-4 py-24">
@@ -38,28 +42,34 @@ export default function Bandcamp() {
           Escucha, descarga y apoya a los artistas en Bandcamp
         </p>
 
-          <div className="mx-auto flex max-w-[700px] items-center gap-3">
+        <div className="mx-auto max-w-[700px] overflow-hidden rounded-lg border border-[#2a2a4a]">
+          <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(${-current * 700}px)` }}>
+            {albums.map((a, i) => (
+              <div key={a.id} className="shrink-0" style={{ width: 700 }}>
+                <div className="-mx-[60px]">
+                  <iframe
+                    style={{ border: 0, width: "100%", height: 500 }}
+                    src={`https://bandcamp.com/EmbeddedPlayer/album=${a.id}/size=large/bgcol=0a0a0f/linkcol=ff00ff/tracklist=false/transparent=true/`}
+                    seamless
+                    title={`${a.title} en Bandcamp`}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-4 flex items-center justify-center gap-4">
           <button
             onClick={prev}
-            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#2a2a4a] text-[#8888aa] transition-all hover:border-[#ff00ff] hover:text-[#ff00ff]"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-[#2a2a4a] text-[#8888aa] transition-colors hover:border-[#ff00ff] hover:text-[#ff00ff]"
             aria-label="Anterior"
           >
             <ArrowSVG direction="left" />
           </button>
-
-          <div className="aspect-[5/4] w-full overflow-hidden rounded-lg border border-[#2a2a4a]">
-            <iframe
-              key={album.id}
-              style={{ border: 0, width: "100%", height: "100%" }}
-              src={`https://bandcamp.com/EmbeddedPlayer/album=${album.id}/size=large/bgcol=0a0a0f/linkcol=ff00ff/tracklist=false/transparent=true/`}
-              seamless
-              title={`${album.title} en Bandcamp`}
-            />
-          </div>
-
           <button
             onClick={next}
-            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#2a2a4a] text-[#8888aa] transition-all hover:border-[#ff00ff] hover:text-[#ff00ff]"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-[#2a2a4a] text-[#8888aa] transition-colors hover:border-[#ff00ff] hover:text-[#ff00ff]"
             aria-label="Siguiente"
           >
             <ArrowSVG direction="right" />
