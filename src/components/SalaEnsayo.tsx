@@ -103,7 +103,7 @@ export default function SalaEnsayo() {
                 key={a.label}
                 className="flex flex-col items-center gap-1 rounded-lg border border-[#2a2a4a] bg-[#0a0a0f]/50 px-2 py-3 transition-colors hover:border-[#ff00ff]/50"
               >
-                <span className="flex items-center justify-center text-[#8888aa]">{a.icon}</span>
+                <span className="flex items-center justify-center text-[#00ffff]">{a.icon}</span>
                 <span className="text-xs text-[#8888aa]">{a.label}</span>
               </div>
             ))}
