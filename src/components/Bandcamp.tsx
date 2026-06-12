@@ -1,6 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  useCarousel,
+} from "@/components/ui/carousel";
 
 const albums = [
   { id: 1993582687, title: "El Estilo de la Vieja en la Nueva Escuela", artist: "YOU VANNI" },
@@ -21,17 +26,30 @@ function ArrowSVG({ direction }: { direction: "left" | "right" }) {
   );
 }
 
+function CarouselNav() {
+  const { scrollPrev, scrollNext } = useCarousel();
+
+  return (
+    <div className="mt-4 flex items-center justify-center gap-4">
+      <button
+        onClick={scrollPrev}
+        className="flex h-10 w-10 items-center justify-center rounded-full border border-[#2a2a4a] text-[#8888aa] transition-colors hover:border-[#ff00ff] hover:text-[#ff00ff]"
+        aria-label="Anterior"
+      >
+        <ArrowSVG direction="left" />
+      </button>
+      <button
+        onClick={scrollNext}
+        className="flex h-10 w-10 items-center justify-center rounded-full border border-[#2a2a4a] text-[#8888aa] transition-colors hover:border-[#ff00ff] hover:text-[#ff00ff]"
+        aria-label="Siguiente"
+      >
+        <ArrowSVG direction="right" />
+      </button>
+    </div>
+  );
+}
+
 export default function Bandcamp() {
-  const [current, setCurrent] = useState(0);
-
-  const getAlbum = (offset: number) =>
-    albums[(current + offset + albums.length) % albums.length];
-
-  const prev = () => setCurrent((c) => (c === 0 ? albums.length - 1 : c - 1));
-  const next = () => setCurrent((c) => (c === albums.length - 1 ? 0 : c + 1));
-
-  const PEEK = 60;
-
   return (
     <section id="bandcamp" className="border-y border-[#2a2a4a] px-4 py-24">
       <div className="mx-auto max-w-4xl text-center">
@@ -42,10 +60,13 @@ export default function Bandcamp() {
           Escucha, descarga y apoya a los artistas en Bandcamp
         </p>
 
-        <div className="mx-auto max-w-[700px] overflow-hidden rounded-lg border border-[#2a2a4a]">
-          <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(${-current * 700}px)` }}>
-            {albums.map((a, i) => (
-              <div key={a.id} className="shrink-0" style={{ width: 700 }}>
+        <Carousel
+          opts={{ loop: true }}
+          className="mx-auto max-w-[700px]"
+        >
+          <CarouselContent>
+            {albums.map((a) => (
+              <CarouselItem key={a.id}>
                 <div className="-mx-[60px]">
                   <iframe
                     style={{ border: 0, width: "100%", height: 500 }}
@@ -54,27 +75,11 @@ export default function Bandcamp() {
                     title={`${a.title} en Bandcamp`}
                   />
                 </div>
-              </div>
+              </CarouselItem>
             ))}
-          </div>
-        </div>
-
-        <div className="mt-4 flex items-center justify-center gap-4">
-          <button
-            onClick={prev}
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-[#2a2a4a] text-[#8888aa] transition-colors hover:border-[#ff00ff] hover:text-[#ff00ff]"
-            aria-label="Anterior"
-          >
-            <ArrowSVG direction="left" />
-          </button>
-          <button
-            onClick={next}
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-[#2a2a4a] text-[#8888aa] transition-colors hover:border-[#ff00ff] hover:text-[#ff00ff]"
-            aria-label="Siguiente"
-          >
-            <ArrowSVG direction="right" />
-          </button>
-        </div>
+          </CarouselContent>
+          <CarouselNav />
+        </Carousel>
 
         <a
           href="https://vizcosoentertainment.bandcamp.com"
