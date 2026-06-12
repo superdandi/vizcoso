@@ -23,14 +23,14 @@ export default function SobreMi() {
             Músico, productor y gestor cultural
           </p>
           <p className="mx-auto max-w-2xl leading-relaxed text-[#c0c0d0]">
-            Músico, productor y gestor cultural de Talca, Región del Maule. Con
-            formación en informática y más de dos décadas de experiencia en
-            proyectos interdisciplinarios, fundé Vizcoso Entertainment como un
-            espacio donde la música, la tecnología y la narrativa visual
-            convergen para crear y potenciar proyectos artísticos. Mi trayectoria
-            abarca desde la gestión operativa de instalaciones informáticas hasta
-            la producción musical y audiovisual, siempre orientada a fomentar la
-            colaboración artística y el impacto cultural en la comunidad.
+            Con formación en informática y múltiples talleres creativos y de
+            gestión cultural, y más de dos décadas de experiencia en proyectos
+            interdisciplinarios, fundé Vizcoso Entertainment como un espacio
+            donde la música y la tecnología convergen para crear y potenciar
+            proyectos artísticos. Mi trayectoria abarca desde la producción
+            musical y audiovisual hasta la gestión de instalaciones informáticas,
+            siempre orientada a fomentar la colaboración artística y el impacto
+            cultural en la comunidad.
           </p>
         </div>
       </div>
