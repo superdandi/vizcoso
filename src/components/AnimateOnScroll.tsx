@@ -5,9 +5,10 @@ import { useRef, useState, useEffect, type ReactNode } from "react";
 interface Props {
   children: ReactNode;
   className?: string;
+  animation?: "fade-up" | "fade-left" | "fade-right" | "scale-in";
 }
 
-export default function AnimateOnScroll({ children, className = "" }: Props) {
+export default function AnimateOnScroll({ children, className = "", animation = "fade-up" }: Props) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
@@ -32,9 +33,7 @@ export default function AnimateOnScroll({ children, className = "" }: Props) {
   return (
     <div
       ref={ref}
-      className={`transition-all duration-700 ease-out ${
-        visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-      } ${className}`}
+      className={`${visible ? `in-view animate-${animation}` : "opacity-0"} ${className}`}
     >
       {children}
     </div>

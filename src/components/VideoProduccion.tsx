@@ -3,7 +3,7 @@ import { videoServicios } from "@/data/services";
 
 export default function VideoProduccion() {
   return (
-    <section id="video" className="border-t border-[#2a2a4a] px-4 py-24">
+    <section id="video" className="border-t border-[#2a2a4a] bg-grid px-4 py-24">
       <AnimateOnScroll>
       <div className="mx-auto max-w-6xl">
         <h2 className="glow-magenta mb-2 text-center text-3xl font-bold sm:text-4xl">
@@ -18,7 +18,7 @@ export default function VideoProduccion() {
 
         <div className="grid gap-6 sm:grid-cols-2">
           {videoServicios.map((v, i) => (
-            <div key={i} className="card-cyber rounded-lg p-6 transition-all">
+            <div key={i} className="card-cyber card-fade-up rounded-lg p-6 transition-all">
               <h3 className="mb-3 text-lg font-bold text-[#00ffff]">
                 {v.title}
               </h3>

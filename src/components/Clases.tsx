@@ -3,8 +3,8 @@ import { clasesMusica } from "@/data/services";
 
 export default function Clases() {
   return (
-    <section id="clases" className="border-t border-[#2a2a4a] px-4 py-24">
-      <AnimateOnScroll>
+    <section id="clases" className="border-t border-[#2a2a4a] bg-grid px-4 py-24">
+      <AnimateOnScroll animation="fade-left">
       <div className="mx-auto max-w-4xl">
         <h2 className="glow-cyan mb-2 text-center text-3xl font-bold sm:text-4xl">
           Formación Musical
@@ -17,7 +17,7 @@ export default function Clases() {
           {clasesMusica.map((c, i) => (
             <div
               key={i}
-              className={`flex items-center justify-between px-6 py-4 ${
+              className={`card-fade-left flex items-center justify-between px-6 py-4 ${
                 i % 2 === 0 ? "bg-[#1a1a2e]" : "bg-[#16163a]"
               }`}
             >

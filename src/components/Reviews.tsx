@@ -3,8 +3,8 @@ import { reviews } from "@/data/reviews";
 
 export default function Reviews() {
   return (
-    <section id="reviews" className="border-t border-[#2a2a4a] px-4 py-24">
-      <AnimateOnScroll>
+    <section id="reviews" className="border-t border-[#2a2a4a] bg-grid px-4 py-24">
+      <AnimateOnScroll animation="scale-in">
       <div className="mx-auto max-w-6xl">
         <h2 className="glow-cyan mb-2 text-center text-3xl font-bold sm:text-4xl">
           Opiniones
@@ -15,7 +15,7 @@ export default function Reviews() {
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {reviews.map((r, i) => (
-            <div key={i} className="card-cyber flex flex-col rounded-lg p-6">
+            <div key={i} className="card-cyber card-scale-in flex flex-col rounded-lg p-6">
               <div className="mb-3 flex items-center gap-1">
                 {Array.from({ length: 5 }).map((_, j) => (
                   <span

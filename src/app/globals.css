@@ -79,8 +79,10 @@
   .card-cyber:hover {
     border-color: var(--color-neon-magenta);
     box-shadow:
-      0 0 10px rgba(255, 0, 255, 0.2),
-      inset 0 0 10px rgba(255, 0, 255, 0.05);
+      0 0 20px rgba(255, 0, 255, 0.3),
+      0 0 60px rgba(255, 0, 255, 0.1),
+      inset 0 0 20px rgba(255, 0, 255, 0.05);
+    transform: translateY(-2px);
   }
 }
 
@@ -169,10 +171,128 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background: rgba(255, 0, 255, 0.08);
-  animation: scanline 8s linear infinite;
+  background: rgba(255, 0, 255, 0.1);
+  animation: scanline 6s linear infinite;
   pointer-events: none;
   z-index: 9999;
+}
+
+/* ─── Scroll animations ─── */
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(60px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-left {
+  from { opacity: 0; transform: translateX(-60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fade-right {
+  from { opacity: 0; transform: translateX(60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.5); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fade-up { animation: fade-up 1s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.animate-fade-left { animation: fade-left 1s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.animate-fade-right { animation: fade-right 1s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.animate-scale-in { animation: scale-in 1s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+/* Staggered card children — triggered when parent has .in-view */
+
+.in-view .card-fade-up {
+  animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-play-state: running;
+}
+.card-fade-up {
+  opacity: 0;
+  animation-play-state: paused;
+}
+.card-fade-up:nth-child(1) { animation-delay: 0s; }
+.card-fade-up:nth-child(2) { animation-delay: 0.08s; }
+.card-fade-up:nth-child(3) { animation-delay: 0.16s; }
+.card-fade-up:nth-child(4) { animation-delay: 0.24s; }
+.card-fade-up:nth-child(5) { animation-delay: 0.32s; }
+.card-fade-up:nth-child(6) { animation-delay: 0.40s; }
+.card-fade-up:nth-child(7) { animation-delay: 0.48s; }
+.card-fade-up:nth-child(8) { animation-delay: 0.56s; }
+.card-fade-up:nth-child(9) { animation-delay: 0.64s; }
+.card-fade-up:nth-child(10) { animation-delay: 0.72s; }
+.card-fade-up:nth-child(11) { animation-delay: 0.80s; }
+.card-fade-up:nth-child(12) { animation-delay: 0.88s; }
+
+.in-view .card-scale-in {
+  animation: scale-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-play-state: running;
+}
+.card-scale-in {
+  opacity: 0;
+  animation-play-state: paused;
+}
+.card-scale-in:nth-child(1) { animation-delay: 0s; }
+.card-scale-in:nth-child(2) { animation-delay: 0.08s; }
+.card-scale-in:nth-child(3) { animation-delay: 0.16s; }
+.card-scale-in:nth-child(4) { animation-delay: 0.24s; }
+.card-scale-in:nth-child(5) { animation-delay: 0.32s; }
+.card-scale-in:nth-child(6) { animation-delay: 0.40s; }
+.card-scale-in:nth-child(7) { animation-delay: 0.48s; }
+.card-scale-in:nth-child(8) { animation-delay: 0.56s; }
+.card-scale-in:nth-child(9) { animation-delay: 0.64s; }
+.card-scale-in:nth-child(10) { animation-delay: 0.72s; }
+.card-scale-in:nth-child(11) { animation-delay: 0.80s; }
+.card-scale-in:nth-child(12) { animation-delay: 0.88s; }
+
+.in-view .card-fade-left {
+  animation: fade-left 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-play-state: running;
+}
+.card-fade-left {
+  opacity: 0;
+  animation-play-state: paused;
+}
+.card-fade-left:nth-child(1) { animation-delay: 0s; }
+.card-fade-left:nth-child(2) { animation-delay: 0.08s; }
+.card-fade-left:nth-child(3) { animation-delay: 0.16s; }
+.card-fade-left:nth-child(4) { animation-delay: 0.24s; }
+.card-fade-left:nth-child(5) { animation-delay: 0.32s; }
+.card-fade-left:nth-child(6) { animation-delay: 0.40s; }
+.card-fade-left:nth-child(7) { animation-delay: 0.48s; }
+.card-fade-left:nth-child(8) { animation-delay: 0.56s; }
+.card-fade-left:nth-child(9) { animation-delay: 0.64s; }
+.card-fade-left:nth-child(10) { animation-delay: 0.72s; }
+.card-fade-left:nth-child(11) { animation-delay: 0.80s; }
+.card-fade-left:nth-child(12) { animation-delay: 0.88s; }
+
+/* ─── Cyberpunk effects ─── */
+
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(255, 0, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 0, 255, 0.04) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.vignette {
+  box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.75);
+}
+
+.glow-magenta-intense {
+  text-shadow:
+    0 0 7px var(--color-neon-magenta),
+    0 0 14px var(--color-neon-magenta),
+    0 0 28px var(--color-neon-magenta),
+    0 0 56px var(--color-neon-magenta);
+}
+
+.glow-cyan-intense {
+  text-shadow:
+    0 0 7px var(--color-neon-cyan),
+    0 0 14px var(--color-neon-cyan),
+    0 0 28px var(--color-neon-cyan),
+    0 0 56px var(--color-neon-cyan);
 }
 
 @theme inline {

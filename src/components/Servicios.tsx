@@ -3,7 +3,7 @@ import { serviciosGrabacion } from "@/data/services";
 
 export default function Servicios() {
   return (
-    <section id="servicios" className="border-t border-[#2a2a4a] px-4 py-24">
+    <section id="servicios" className="border-t border-[#2a2a4a] bg-grid px-4 py-24">
       <AnimateOnScroll>
         <div className="mx-auto max-w-6xl">
         <h2 className="glow-cyan mb-2 text-center text-3xl font-bold sm:text-4xl">
@@ -15,7 +15,7 @@ export default function Servicios() {
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {serviciosGrabacion.map((s, i) => (
-            <div key={i} className="card-cyber rounded-lg p-6 transition-all">
+            <div key={i} className="card-cyber card-fade-up rounded-lg p-6 transition-all">
               <h3 className="mb-2 text-lg font-bold text-[#ff00ff]">
                 {s.title}
               </h3>

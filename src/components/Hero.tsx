@@ -4,13 +4,15 @@ export default function Hero() {
       id="hero"
       className="relative flex min-h-screen items-center justify-center overflow-hidden px-4"
     >
+      <div className="pointer-events-none absolute inset-0 bg-grid opacity-20" />
       <div
-        className="pointer-events-none absolute inset-0 opacity-30"
+        className="pointer-events-none absolute inset-0"
         style={{
           backgroundImage:
             "radial-gradient(circle at 50% 50%, rgba(255,0,255,0.15) 0%, transparent 60%), radial-gradient(circle at 80% 20%, rgba(0,255,255,0.1) 0%, transparent 50%)",
         }}
       />
+      <div className="pointer-events-none absolute inset-0 vignette" />
 
       <div className="relative z-10 text-center">
         <p className="mb-2 text-sm tracking-[0.3em] text-[#8888aa]">

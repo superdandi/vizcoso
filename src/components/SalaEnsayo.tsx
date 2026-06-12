@@ -77,7 +77,7 @@ const amenities = [
 
 export default function SalaEnsayo() {
   return (
-    <section className="border-t border-[#2a2a4a] px-4 py-20">
+    <section className="border-t border-[#2a2a4a] bg-grid px-4 py-20">
       <AnimateOnScroll>
       <div className="mx-auto max-w-4xl text-center">
         <h2 className="glow-magenta mb-4 text-3xl font-bold sm:text-4xl">
@@ -103,7 +103,7 @@ export default function SalaEnsayo() {
             {amenities.map((a) => (
               <div
                 key={a.label}
-                className="flex flex-col items-center gap-1 rounded-lg border border-[#2a2a4a] bg-[#0a0a0f]/50 px-2 py-3 transition-colors hover:border-[#ff00ff]/50"
+                className="card-scale-in flex flex-col items-center gap-1 rounded-lg border border-[#2a2a4a] bg-[#0a0a0f]/50 px-2 py-3 transition-colors hover:border-[#ff00ff]/50"
               >
                 <span className="flex items-center justify-center text-[#00ffff]">{a.icon}</span>
                 <span className="text-xs text-[#8888aa]">{a.label}</span>
