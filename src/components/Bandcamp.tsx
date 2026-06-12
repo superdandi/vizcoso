@@ -1,10 +1,12 @@
 "use client";
 
+import { useState, useCallback, useEffect } from "react";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   useCarousel,
+  type CarouselApi,
 } from "@/components/ui/carousel";
 
 const albums = [
@@ -26,30 +28,45 @@ function ArrowSVG({ direction }: { direction: "left" | "right" }) {
   );
 }
 
-function CarouselNav() {
+function OverlayArrows() {
   const { scrollPrev, scrollNext } = useCarousel();
 
   return (
-    <div className="mt-6 flex items-center justify-center gap-4">
+    <>
       <button
         onClick={scrollPrev}
-        className="flex h-10 w-10 items-center justify-center rounded-full border border-[#2a2a4a] text-[#8888aa] transition-colors hover:border-[#ff00ff] hover:text-[#ff00ff]"
+        className="absolute left-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#2a2a4a] bg-[#0a0a0f]/80 text-[#8888aa] backdrop-blur transition-colors hover:border-[#ff00ff] hover:text-[#ff00ff]"
         aria-label="Anterior"
       >
         <ArrowSVG direction="left" />
       </button>
       <button
         onClick={scrollNext}
-        className="flex h-10 w-10 items-center justify-center rounded-full border border-[#2a2a4a] text-[#8888aa] transition-colors hover:border-[#ff00ff] hover:text-[#ff00ff]"
+        className="absolute right-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#2a2a4a] bg-[#0a0a0f]/80 text-[#8888aa] backdrop-blur transition-colors hover:border-[#ff00ff] hover:text-[#ff00ff]"
         aria-label="Siguiente"
       >
         <ArrowSVG direction="right" />
       </button>
-    </div>
+    </>
   );
 }
 
 export default function Bandcamp() {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+
+  const onSelect = useCallback((carouselApi: CarouselApi) => {
+    if (!carouselApi) return;
+    setCurrent(carouselApi.selectedScrollSnap());
+  }, []);
+
+  useEffect(() => {
+    if (!api) return;
+    api.on("select", onSelect);
+    onSelect(api);
+    return () => { api.off("select", onSelect); };
+  }, [api, onSelect]);
+
   return (
     <section id="bandcamp" className="border-y border-[#2a2a4a] px-4 py-24">
       <div className="mx-auto max-w-4xl text-center">
@@ -62,13 +79,21 @@ export default function Bandcamp() {
 
         <Carousel
           opts={{ loop: true, align: "center" }}
+          setApi={setApi}
           className="mx-auto max-w-[820px]"
         >
           <CarouselContent className="ml-0">
-            {albums.map((a) => (
-              <CarouselItem key={a.id} className="pl-0 basis-[calc(100%-120px)]">
+            {albums.map((a, i) => (
+              <CarouselItem
+                key={a.id}
+                className={`pl-0 basis-[calc(100%-120px)] transition-all duration-300 ${
+                  i !== current
+                    ? "pointer-events-none opacity-30 blur-[2px] saturate-0"
+                    : ""
+                }`}
+              >
                 <iframe
-                  style={{ border: 0, width: "100%", height: 500 }}
+                  style={{ border: 0, width: "100%", height: 600 }}
                   src={`https://bandcamp.com/EmbeddedPlayer/album=${a.id}/size=large/bgcol=0a0a0f/linkcol=ff00ff/tracklist=false/transparent=true/`}
                   seamless
                   title={`${a.title} en Bandcamp`}
@@ -76,7 +101,7 @@ export default function Bandcamp() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselNav />
+          <OverlayArrows />
         </Carousel>
 
         <a
