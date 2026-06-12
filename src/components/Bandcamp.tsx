@@ -78,7 +78,7 @@ export default function Bandcamp() {
         </p>
 
         <Carousel
-          opts={{ loop: true, align: "center" }}
+          opts={{ align: "center" }}
           setApi={setApi}
           className="mx-auto max-w-[820px]"
         >
@@ -93,8 +93,8 @@ export default function Bandcamp() {
                 }`}
               >
                 <iframe
-                  style={{ border: 0, width: "100%", height: 600 }}
-                  src={`https://bandcamp.com/EmbeddedPlayer/album=${a.id}/size=large/bgcol=0a0a0f/linkcol=ff00ff/tracklist=false/transparent=true/`}
+                  style={{ border: 0, width: "100%", height: 700 }}
+                  src={`https://bandcamp.com/EmbeddedPlayer/album=${a.id}/size=large/bgcol=0a0a0f/linkcol=ff00ff/tracklist=true/transparent=true/`}
                   seamless
                   title={`${a.title} en Bandcamp`}
                 />
