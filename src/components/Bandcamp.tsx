@@ -29,24 +29,28 @@ function ArrowSVG({ direction }: { direction: "left" | "right" }) {
 }
 
 function OverlayArrows() {
-  const { scrollPrev, scrollNext } = useCarousel();
+  const { scrollPrev, scrollNext, canScrollPrev, canScrollNext } = useCarousel();
 
   return (
     <>
-      <button
-        onClick={scrollPrev}
-        className="absolute left-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#2a2a4a] bg-[#0a0a0f]/80 text-[#8888aa] backdrop-blur transition-colors hover:border-[#ff00ff] hover:text-[#ff00ff]"
-        aria-label="Anterior"
-      >
-        <ArrowSVG direction="left" />
-      </button>
-      <button
-        onClick={scrollNext}
-        className="absolute right-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#2a2a4a] bg-[#0a0a0f]/80 text-[#8888aa] backdrop-blur transition-colors hover:border-[#ff00ff] hover:text-[#ff00ff]"
-        aria-label="Siguiente"
-      >
-        <ArrowSVG direction="right" />
-      </button>
+      {canScrollPrev && (
+        <button
+          onClick={scrollPrev}
+          className="absolute left-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#2a2a4a] bg-[#0a0a0f]/80 text-[#8888aa] backdrop-blur transition-colors hover:border-[#ff00ff] hover:text-[#ff00ff]"
+          aria-label="Anterior"
+        >
+          <ArrowSVG direction="left" />
+        </button>
+      )}
+      {canScrollNext && (
+        <button
+          onClick={scrollNext}
+          className="absolute right-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#2a2a4a] bg-[#0a0a0f]/80 text-[#8888aa] backdrop-blur transition-colors hover:border-[#ff00ff] hover:text-[#ff00ff]"
+          aria-label="Siguiente"
+        >
+          <ArrowSVG direction="right" />
+        </button>
+      )}
     </>
   );
 }
@@ -93,6 +97,7 @@ export default function Bandcamp() {
                 }`}
               >
                 <iframe
+                  key={`${a.id}-${i === current}`}
                   style={{ border: 0, width: "100%", height: 700 }}
                   src={`https://bandcamp.com/EmbeddedPlayer/album=${a.id}/size=large/bgcol=0a0a0f/linkcol=ff00ff/tracklist=true/transparent=true/`}
                   seamless
