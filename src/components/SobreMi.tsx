@@ -10,23 +10,27 @@ export default function SobreMi() {
         </p>
 
         <div className="card-cyber rounded-lg p-8 text-center">
-          <div className="mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full border-2 border-[#ff00ff] bg-[#1a1a2e]">
-            <span className="glow-magenta text-3xl font-black">V</span>
-          </div>
+          <img
+            src="https://yt3.googleusercontent.com/hqEmfAGrHDxRmnDekC_6CmoBsSNcFdXvqzMA92Xw5qJr30BLswXNdYKPi3aDv6AsEO69PMvS=s900-c-k-c0x00ffffff-no-rj"
+            alt="Vizcoso Entertainment"
+            className="mx-auto mb-6 h-24 w-24 rounded-full border-2 border-[#ff00ff] object-cover"
+          />
 
           <h3 className="mb-2 text-xl font-bold text-[#00ffff]">
             Daniel Cobos
           </h3>
-          <p className="mb-2 text-sm text-[#ffaa00]">
-            Cyber Dandi &mdash; Músico &amp; Productor
+          <p className="mb-4 text-sm text-[#ffaa00]">
+            Músico, productor y gestor cultural
           </p>
           <p className="mx-auto max-w-2xl leading-relaxed text-[#c0c0d0]">
-            VIZCOSO Entertainment nace de la pasión por la música, la creación y
-            el arte en todas sus formas. Un espacio en Talca donde artistas,
-            bandas y creadores encuentran un lugar para dar vida a sus proyectos.
-            Desde la grabación multipista hasta la producción audiovisual, cada
-            servicio está pensado para potenciar tu talento en un ambiente
-            acogedor y profesional.
+            Músico, productor y gestor cultural de Talca, Región del Maule. Con
+            formación en informática y más de dos décadas de experiencia en
+            proyectos interdisciplinarios, fundé Vizcoso Entertainment como un
+            espacio donde la música, la tecnología y la narrativa visual
+            convergen para crear y potenciar proyectos artísticos. Mi trayectoria
+            abarca desde la gestión operativa de instalaciones informáticas hasta
+            la producción musical y audiovisual, siempre orientada a fomentar la
+            colaboración artística y el impacto cultural en la comunidad.
           </p>
         </div>
       </div>
