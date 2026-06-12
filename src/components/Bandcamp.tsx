@@ -90,11 +90,7 @@ export default function Bandcamp() {
             {albums.map((a, i) => (
               <CarouselItem
                 key={a.id}
-                className={`transition-all duration-300 ${
-                  i === 0 || i === albums.length - 1
-                    ? "basis-[calc(100%-60px)] px-[30px]"
-                    : "pl-0 basis-[calc(100%-120px)]"
-                } ${
+                className={`basis-[calc(100%-90px)] px-[15px] transition-all duration-300 ${
                   i !== current
                     ? "pointer-events-none opacity-30 blur-[2px] saturate-0"
                     : ""
