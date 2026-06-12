@@ -6,8 +6,10 @@ export default function Reviews() {
     <section id="reviews" className="border-t border-[#2a2a4a] bg-grid px-4 py-24">
       <AnimateOnScroll animation="scale-in">
       <div className="mx-auto max-w-6xl">
-        <h2 className="glow-cyan mb-2 text-center text-3xl font-bold sm:text-4xl">
-          Opiniones
+        <h2 className="mb-2 text-center text-3xl font-bold sm:text-4xl">
+          <span data-text="Opiniones" className="glitch-text neon-title flicker-erratic glow-cyan">
+            Opiniones
+          </span>
         </h2>
         <p className="mb-12 text-center text-[#8888aa]">
           Lo que dicen quienes ya han vivido la experiencia VIZCOSO

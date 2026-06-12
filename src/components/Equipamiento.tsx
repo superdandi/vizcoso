@@ -5,8 +5,10 @@ export default function Equipamiento() {
     <section id="equipamiento" className="border-t border-[#2a2a4a] px-4 py-24">
       <AnimateOnScroll animation="scale-in">
       <div className="mx-auto max-w-4xl">
-        <h2 className="glow-magenta mb-2 text-center text-3xl font-bold sm:text-4xl">
-          Equipamiento de Grabación
+        <h2 className="mb-2 text-center text-3xl font-bold sm:text-4xl">
+          <span data-text="Equipamiento de Grabación" className="glitch-text neon-title flicker-erratic glow-magenta">
+            Equipamiento de Grabación
+          </span>
         </h2>
         <p className="mb-12 text-center text-[#8888aa]">
           Tecnología profesional para tu proyecto

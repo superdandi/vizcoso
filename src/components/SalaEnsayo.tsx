@@ -80,8 +80,10 @@ export default function SalaEnsayo() {
     <section className="border-t border-[#2a2a4a] bg-grid px-4 py-20">
       <AnimateOnScroll>
       <div className="mx-auto max-w-4xl text-center">
-        <h2 className="glow-magenta mb-4 text-3xl font-bold sm:text-4xl">
-          {salaEnsayo.title}
+        <h2 className="mb-4 text-3xl font-bold sm:text-4xl">
+          <span data-text={salaEnsayo.title} className="glitch-text neon-title flicker-erratic glow-magenta">
+            {salaEnsayo.title}
+          </span>
         </h2>
         <p className="mb-6 text-[#8888aa]">
           Espacio amplio, equipado y acogedor para tus ensayos

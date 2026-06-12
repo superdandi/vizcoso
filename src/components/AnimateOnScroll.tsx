@@ -33,7 +33,7 @@ export default function AnimateOnScroll({ children, className = "", animation = 
   return (
     <div
       ref={ref}
-      className={`${visible ? `in-view animate-${animation}` : "opacity-0"} ${className}`}
+      className={`relative ${visible ? `in-view animate-${animation}` : "opacity-0"} ${className}`}
     >
       {children}
     </div>

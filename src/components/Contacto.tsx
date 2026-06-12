@@ -8,8 +8,10 @@ export default function Contacto() {
     >
       <AnimateOnScroll>
       <div className="mx-auto max-w-4xl text-center">
-        <h2 className="glow-magenta mb-2 text-3xl font-bold sm:text-4xl">
-          Contáctame
+        <h2 className="mb-2 text-3xl font-bold sm:text-4xl">
+          <span data-text="Contáctame" className="glitch-text neon-title flicker-erratic glow-magenta">
+            Contáctame
+          </span>
         </h2>
         <p className="mb-10 text-[#8888aa]">
           Hagamos realidad tu proyecto

@@ -5,8 +5,10 @@ export default function SobreMi() {
     <section id="sobre-mi" className="border-t border-[#2a2a4a] px-4 py-24">
       <AnimateOnScroll>
       <div className="mx-auto max-w-4xl">
-        <h2 className="glow-cyan mb-2 text-center text-3xl font-bold sm:text-4xl">
-          Sobre Mí
+        <h2 className="mb-2 text-center text-3xl font-bold sm:text-4xl">
+          <span data-text="Sobre Mí" className="glitch-text neon-title flicker-erratic glow-cyan">
+            Sobre Mí
+          </span>
         </h2>
         <p className="mb-10 text-center text-[#8888aa]">
           Detrás de VIZCOSO

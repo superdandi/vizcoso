@@ -6,8 +6,10 @@ export default function Servicios() {
     <section id="servicios" className="border-t border-[#2a2a4a] bg-grid px-4 py-24">
       <AnimateOnScroll>
         <div className="mx-auto max-w-6xl">
-        <h2 className="glow-cyan mb-2 text-center text-3xl font-bold sm:text-4xl">
-          Servicios de Grabación
+        <h2 className="mb-2 text-center text-3xl font-bold sm:text-4xl">
+          <span data-text="Servicios de Grabación" className="glitch-text neon-title flicker-erratic glow-cyan">
+            Servicios de Grabación
+          </span>
         </h2>
         <p className="mb-12 text-center text-[#8888aa]">
           Estudio profesional equipado para tu proyecto musical

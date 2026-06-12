@@ -76,8 +76,10 @@ export default function Bandcamp() {
     <section id="bandcamp" className="border-t border-[#2a2a4a] px-4 py-24">
       <AnimateOnScroll>
         <div className="mx-auto max-w-4xl text-center">
-        <h2 className="glow-magenta mb-2 text-3xl font-bold sm:text-4xl">
-          Sello VIZCOSO
+        <h2 className="mb-2 text-3xl font-bold sm:text-4xl">
+          <span data-text="Sello VIZCOSO" className="glitch-text neon-title flicker-erratic glow-magenta">
+            Sello VIZCOSO
+          </span>
         </h2>
         <p className="mb-10 text-[#8888aa]">
           Escucha, descarga y apoya a los artistas en Bandcamp

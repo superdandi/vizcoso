@@ -6,8 +6,10 @@ export default function Clases() {
     <section id="clases" className="border-t border-[#2a2a4a] bg-grid px-4 py-24">
       <AnimateOnScroll animation="fade-left">
       <div className="mx-auto max-w-4xl">
-        <h2 className="glow-cyan mb-2 text-center text-3xl font-bold sm:text-4xl">
-          Formación Musical
+        <h2 className="mb-2 text-center text-3xl font-bold sm:text-4xl">
+          <span data-text="Formación Musical" className="glitch-text neon-title flicker-erratic glow-cyan">
+            Formación Musical
+          </span>
         </h2>
         <p className="mb-12 text-center text-[#8888aa]">
           Clases presenciales personalizadas para todos los niveles
