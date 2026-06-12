@@ -10,10 +10,10 @@ import {
 } from "@/components/ui/carousel";
 
 const albums = [
-  { id: 1993582687, title: "El Estilo de la Vieja en la Nueva Escuela", artist: "YOU VANNI" },
-  { id: 1407978738, title: "Sabio Domingo", artist: "INACID" },
-  { id: 2470567565, title: "ARTESUNO", artist: "Artesano" },
-  { id: 2782766792, title: "Animales Atacamos Tu Ciudad", artist: "Animales" },
+  { id: 1993582687, title: "El Estilo de la Vieja en la Nueva Escuela", artist: "YOU VANNI", artUrl: "https://f4.bcbits.com/img/a3095031764_16.jpg" },
+  { id: 1407978738, title: "Sabio Domingo", artist: "INACID", artUrl: "https://f4.bcbits.com/img/a2794208570_16.jpg" },
+  { id: 2470567565, title: "ARTESUNO", artist: "Artesano", artUrl: "https://f4.bcbits.com/img/a0539582260_16.jpg" },
+  { id: 2782766792, title: "Animales Atacamos Tu Ciudad", artist: "Animales", artUrl: "https://f4.bcbits.com/img/a0992497256_16.jpg" },
 ];
 
 function ArrowSVG({ direction }: { direction: "left" | "right" }) {
@@ -90,19 +90,26 @@ export default function Bandcamp() {
             {albums.map((a, i) => (
               <CarouselItem
                 key={a.id}
-                className={`basis-[calc(100%-90px)] px-[15px] transition-all duration-300 ${
+                className={`basis-[calc(100%-90px)] px-[15px] ${
                   i !== current
                     ? "pointer-events-none opacity-30 blur-[2px] saturate-0"
                     : ""
                 }`}
               >
-                <iframe
-                  key={`${a.id}-${i === current}`}
-                  style={{ border: 0, width: "100%", height: 700 }}
-                  src={`https://bandcamp.com/EmbeddedPlayer/album=${a.id}/size=large/bgcol=0a0a0f/linkcol=ff00ff/tracklist=true/transparent=true/`}
-                  seamless
-                  title={`${a.title} en Bandcamp`}
-                />
+                {i === current ? (
+                  <iframe
+                    style={{ border: 0, width: "100%", height: 700 }}
+                    src={`https://bandcamp.com/EmbeddedPlayer/album=${a.id}/size=large/bgcol=0a0a0f/linkcol=ff00ff/tracklist=true/transparent=true/`}
+                    seamless
+                    title={`${a.title} en Bandcamp`}
+                  />
+                ) : (
+                  <img
+                    src={a.artUrl}
+                    alt={a.title}
+                    className="h-[700px] w-full object-cover"
+                  />
+                )}
               </CarouselItem>
             ))}
           </CarouselContent>
