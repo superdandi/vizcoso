@@ -20,11 +20,9 @@ interface Drop {
   speed: number;
   length: number;
   chars: string[];
-  color: string;
 }
 
 const FONT_SIZE = 14;
-const COLORS = ["#00ffff", "#ff00ff", "#ffaa00"];
 
 export default function DigitalRain() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -45,15 +43,14 @@ export default function DigitalRain() {
       drops = Array.from({ length: cols }, (_, i) => ({
         x: i * FONT_SIZE,
         y: Math.random() * h * -1,
-        speed: 0.4 + Math.random() * 2,
-        length: 6 + Math.floor(Math.random() * 14),
+        speed: 0.8 + Math.random() * 3,
+        length: 3 + Math.floor(Math.random() * 5),
         chars: randomChars(30),
-        color: COLORS[Math.floor(Math.random() * COLORS.length)],
       }));
     }
 
     function draw(w: number, h: number) {
-      c.fillStyle = "rgba(10, 10, 15, 0.045)";
+      c.fillStyle = "rgba(10, 10, 15, 0.065)";
       c.fillRect(0, 0, w, h);
 
       c.font = `${FONT_SIZE}px "Courier New", monospace`;
@@ -72,7 +69,7 @@ export default function DigitalRain() {
           } else {
             const t = j / drop.length;
             c.globalAlpha = 0.35 * (1 - t);
-            c.fillStyle = drop.color;
+            c.fillStyle = "#00ffff";
           }
           c.fillText(char, drop.x, y);
         }
@@ -82,8 +79,7 @@ export default function DigitalRain() {
         if (drop.y > h + drop.length * FONT_SIZE) {
           drop.y = -drop.length * FONT_SIZE;
           drop.chars = randomChars(30);
-          drop.color = COLORS[Math.floor(Math.random() * COLORS.length)];
-          drop.speed = 0.4 + Math.random() * 2;
+          drop.speed = 0.8 + Math.random() * 3;
         }
       }
 
