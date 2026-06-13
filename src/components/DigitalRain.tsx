@@ -43,14 +43,14 @@ export default function DigitalRain() {
       drops = Array.from({ length: cols }, (_, i) => ({
         x: i * FONT_SIZE,
         y: Math.random() * h * -1,
-        speed: 0.8 + Math.random() * 3,
-        length: 3 + Math.floor(Math.random() * 5),
+        speed: 1.5 + Math.random() * 4,
+        length: 1 + Math.floor(Math.random() * 3),
         chars: randomChars(30),
       }));
     }
 
     function draw(w: number, h: number) {
-      c.fillStyle = "rgba(10, 10, 15, 0.065)";
+      c.fillStyle = "rgba(10, 10, 15, 0.1)";
       c.fillRect(0, 0, w, h);
 
       c.font = `${FONT_SIZE}px "Courier New", monospace`;
@@ -62,15 +62,10 @@ export default function DigitalRain() {
           if (y < -FONT_SIZE || y > h + FONT_SIZE) continue;
 
           const char = drop.chars[(Math.floor(y / FONT_SIZE) + j) % drop.chars.length];
+          const t = j / drop.length;
 
-          if (j === 0) {
-            c.globalAlpha = 0.95;
-            c.fillStyle = "#ffffff";
-          } else {
-            const t = j / drop.length;
-            c.globalAlpha = 0.35 * (1 - t);
-            c.fillStyle = "#00ffff";
-          }
+          c.globalAlpha = 0.95 * (1 - t * 0.8);
+          c.fillStyle = "#33ff33";
           c.fillText(char, drop.x, y);
         }
 
@@ -79,7 +74,7 @@ export default function DigitalRain() {
         if (drop.y > h + drop.length * FONT_SIZE) {
           drop.y = -drop.length * FONT_SIZE;
           drop.chars = randomChars(30);
-          drop.speed = 0.8 + Math.random() * 3;
+          drop.speed = 1.5 + Math.random() * 4;
         }
       }
 
