@@ -37,13 +37,13 @@ export default function Hero() {
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <a
             href="#servicios"
-            className="rounded border border-[#ff00ff] px-6 py-2 text-sm font-semibold text-[#ff00ff] transition-all hover:bg-[#ff00ff] hover:text-black"
+            className="rounded border border-[#2a2a4a] bg-black/30 backdrop-blur-sm px-6 py-2 text-sm font-semibold text-[#ff00ff] transition-all hover:border-[#ff00ff]/50"
           >
             Ver servicios
           </a>
           <a
             href="#contacto"
-            className="rounded border border-[#00ffff] px-6 py-2 text-sm font-semibold text-[#00ffff] transition-all hover:bg-[#00ffff] hover:text-black"
+            className="rounded border border-[#2a2a4a] bg-black/30 backdrop-blur-sm px-6 py-2 text-sm font-semibold text-[#00ffff] transition-all hover:border-[#ff00ff]/50"
           >
             Contáctame
           </a>
