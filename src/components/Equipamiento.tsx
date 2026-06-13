@@ -16,7 +16,7 @@ export default function Equipamiento() {
 
         <div className="card-cyber mb-10 rounded-lg p-8">
           <div className="flex flex-col items-center gap-4 sm:flex-row">
-            <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-lg border border-[#ff00ff] bg-[#1a1a2e]">
+            <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-lg border border-[#ff00ff] bg-[#1a1a2e]/60 backdrop-blur-sm">
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00ffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="2" y="2" width="20" height="20" rx="2" ry="2" />
                 <circle cx="12" cy="12" r="3" />
@@ -44,7 +44,7 @@ export default function Equipamiento() {
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 vignette">
-          <div className="card-fade-up rounded-lg border border-[#2a2a4a] bg-[#0a0a0f] p-6 transition-all hover:border-[#ff00ff]/50">
+          <div className="card-fade-up rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm p-6 transition-all hover:border-[#ff00ff]/50">
             <h4 className="mb-2 flex items-center gap-1.5 text-lg font-bold text-[#ff00ff]">
               <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="9" y="2" width="6" height="12" rx="3" />
@@ -61,7 +61,7 @@ export default function Equipamiento() {
             </p>
           </div>
 
-          <div className="card-fade-up rounded-lg border border-[#2a2a4a] bg-[#0a0a0f] p-6 transition-all hover:border-[#ff00ff]/50">
+          <div className="card-fade-up rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm p-6 transition-all hover:border-[#ff00ff]/50">
             <h4 className="mb-2 flex items-center gap-1.5 text-lg font-bold text-[#ffaa00]">
               <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <ellipse cx="12" cy="7" rx="8" ry="4" />
@@ -79,7 +79,7 @@ export default function Equipamiento() {
             </p>
           </div>
 
-          <div className="card-fade-up rounded-lg border border-[#2a2a4a] bg-[#0a0a0f] p-6 transition-all hover:border-[#ff00ff]/50">
+          <div className="card-fade-up rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm p-6 transition-all hover:border-[#ff00ff]/50">
             <h4 className="mb-2 flex items-center gap-1.5 text-lg font-bold text-[#00ffff]">
               <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M12 2v15" />
@@ -95,7 +95,7 @@ export default function Equipamiento() {
             </p>
           </div>
 
-          <div className="card-fade-up rounded-lg border border-[#2a2a4a] bg-[#0a0a0f] p-6 transition-all hover:border-[#ff00ff]/50">
+          <div className="card-fade-up rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm p-6 transition-all hover:border-[#ff00ff]/50">
             <h4 className="mb-2 flex items-center gap-1.5 text-lg font-bold text-[#ff00ff]">
               <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M2 15a10 10 0 0 1 20 0" />
