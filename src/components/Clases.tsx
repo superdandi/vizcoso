@@ -19,9 +19,7 @@ export default function Clases() {
           {clasesMusica.map((c, i) => (
             <div
               key={i}
-              className={`card-fade-left flex items-center justify-between px-6 py-4 backdrop-blur-sm ${
-                i % 2 === 0 ? "bg-white/[0.03]" : "bg-white/[0.06]"
-              }`}
+              className="card-fade-left flex items-center justify-between bg-black/30 backdrop-blur-sm px-6 py-4"
             >
               <span className="font-medium">{c.name}</span>
               <span className="font-bold text-[#ff00ff]">{c.price}</span>

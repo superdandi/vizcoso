@@ -52,7 +52,7 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="border-t border-[#2a2a4a] bg-[#0a0a0f]/80 backdrop-blur-md px-4 py-4 md:hidden">
+        <div className="border-t border-[#2a2a4a] bg-black/30 backdrop-blur-sm px-4 py-4 md:hidden">
           <div className="flex flex-col gap-3">
             {sections.map((s) => (
               <button

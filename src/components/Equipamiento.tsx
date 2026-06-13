@@ -16,7 +16,7 @@ export default function Equipamiento() {
 
         <div className="card-cyber mb-10 rounded-lg p-8">
           <div className="flex flex-col items-center gap-4 sm:flex-row">
-            <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-lg border border-[#ff00ff] bg-[#1a1a2e]/60 backdrop-blur-sm">
+            <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-lg border border-[#ff00ff] bg-black/30 backdrop-blur-sm">
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00ffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="2" y="2" width="20" height="20" rx="2" ry="2" />
                 <circle cx="12" cy="12" r="3" />

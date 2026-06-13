@@ -88,7 +88,7 @@ export default function SalaEnsayo() {
         <p className="mb-6 text-[#8888aa]">
           Espacio amplio, equipado y acogedor para tus ensayos
         </p>
-        <div className="inline-block rounded-lg border border-[#ff00ff] bg-[#1a1a2e]/50 backdrop-blur-sm px-12 py-6">
+        <div className="inline-block rounded-lg border border-[#ff00ff] bg-black/30 backdrop-blur-sm px-12 py-6">
           <span className="text-5xl font-black text-[#00ffff]">
             {salaEnsayo.price}
           </span>

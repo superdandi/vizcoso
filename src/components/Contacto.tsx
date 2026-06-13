@@ -29,7 +29,7 @@ export default function Contacto() {
           Escríbeme por WhatsApp
         </a>
 
-        <div className="mx-auto max-w-md rounded-lg border border-[#2a2a4a] bg-[#1a1a2e]/50 backdrop-blur-sm p-8">
+        <div className="mx-auto max-w-md rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm p-8">
           <h3 className="mb-4 text-lg font-bold text-[#00ffff]">
             O contáctame directamente
           </h3>
