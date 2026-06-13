@@ -14,7 +14,7 @@ export default function SobreMi() {
           Detrás de VIZCOSO
         </p>
 
-        <div className="card-cyber rounded-lg p-8 text-center">
+        <div className="rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm p-8 text-center transition-all hover:border-[#ff00ff]/50">
           <img
             src="https://yt3.googleusercontent.com/hqEmfAGrHDxRmnDekC_6CmoBsSNcFdXvqzMA92Xw5qJr30BLswXNdYKPi3aDv6AsEO69PMvS=s900-c-k-c0x00ffffff-no-rj"
             alt="Vizcoso Entertainment"

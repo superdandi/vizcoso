@@ -17,7 +17,7 @@ export default function Servicios() {
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {serviciosGrabacion.map((s, i) => (
-            <div key={i} className="card-cyber card-fade-up rounded-lg p-6 transition-all">
+            <div key={i} className="card-fade-up rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm p-6 transition-all hover:border-[#ff00ff]/50">
               <h3 className="mb-2 text-lg font-bold text-[#ff00ff]">
                 {s.title}
               </h3>

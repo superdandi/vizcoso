@@ -14,7 +14,7 @@ export default function Equipamiento() {
           Tecnología profesional para tu proyecto
         </p>
 
-        <div className="card-cyber mb-10 rounded-lg p-8">
+        <div className="mb-10 rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm p-8 transition-all hover:border-[#ff00ff]/50">
           <div className="flex flex-col items-center gap-4 sm:flex-row">
             <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-lg border border-[#ff00ff] bg-black/30 backdrop-blur-sm">
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00ffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
