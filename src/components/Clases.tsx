@@ -12,7 +12,7 @@ export default function Clases() {
           </span>
         </h2>
         <p className="mb-12 text-center text-[#8888aa]">
-          Clases presenciales personalizadas para todos los niveles
+           Lecciones personalizadas para todos los niveles
         </p>
 
         <div className="overflow-hidden rounded-lg border border-[#2a2a4a]">
@@ -30,7 +30,7 @@ export default function Clases() {
         </div>
 
         <p className="mt-4 text-center text-xs text-[#8888aa]">
-          Valor por hora &bull; Clases presenciales en Talca
+          Valor por hora &bull; Clases presenciales
         </p>
       </div>
       </AnimateOnScroll>
