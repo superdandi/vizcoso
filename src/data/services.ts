@@ -30,7 +30,6 @@ export const serviciosGrabacion: Service[] = [
   {
     title: "Grabación sesión banda en vivo multipista",
     description: "2 horas de estudio",
-    note: "Grabación profesional de tu banda en vivo, múltiples pistas",
     price: "Desde $50.000 CLP",
   },
   {
@@ -74,7 +73,7 @@ export const videoServicios: VideoService[] = [
     price: "Desde $250.000 CLP",
   },
   {
-    title: "Producción de video sesión banda en vivo",
+    title: "Video sesión musical",
     price: "Desde $210.000 CLP",
   },
   {
