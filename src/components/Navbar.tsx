@@ -35,7 +35,7 @@ export default function Navbar() {
             <button
               key={s.id}
               onClick={() => scrollTo(s.id)}
-              className="text-sm text-[#8888aa] transition-colors hover:text-[#00ffff]"
+              className="text-sm text-[#8888aa] nav-link"
             >
               {s.label}
             </button>
@@ -58,7 +58,7 @@ export default function Navbar() {
               <button
                 key={s.id}
                 onClick={() => scrollTo(s.id)}
-                className="text-left text-sm text-[#8888aa] transition-colors hover:text-[#00ffff]"
+                className="text-left text-sm text-[#8888aa] nav-link"
               >
                 {s.label}
               </button>
