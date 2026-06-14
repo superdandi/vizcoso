@@ -45,7 +45,7 @@ export default function Hero() {
             href="#contacto"
             className="rounded border border-[#2a2a4a] bg-black/30 backdrop-blur-sm px-6 py-2 text-sm font-semibold text-[#00ffff] transition-all hover:border-[#ff00ff]/50"
           >
-            Contáctame
+            Escríbeme
           </a>
         </div>
       </div>
