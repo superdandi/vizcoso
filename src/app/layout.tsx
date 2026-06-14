@@ -9,7 +9,7 @@ const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 export const metadata: Metadata = {
   title: "VIZCOSO Entertainment — Estudio Musical & Producción",
   description:
-    "Estudio de grabación, salas de ensayo y formación musical en Talca, Chile. Gestión Cultural & Producción Musical y Audiovisual.",
+    "Estudio de grabación, salas de ensayo y formación musical en Talca, Chile. Producción Musical & Audiovisual • Gestión Cultural.",
   icons: { icon: "/vizcoso/favicon.png" },
   other: { "theme-color": "#0a0a0f" },
   openGraph: {
