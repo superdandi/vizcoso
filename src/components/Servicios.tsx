@@ -12,7 +12,7 @@ export default function Servicios() {
           </span>
         </h2>
         <p className="mb-12 text-center text-[#8888aa]">
-          Estudio profesional equipado para tu proyecto musical
+          Estudio equipado para tu proyecto musical
         </p>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

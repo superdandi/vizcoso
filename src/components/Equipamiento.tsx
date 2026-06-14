@@ -11,7 +11,7 @@ export default function Equipamiento() {
           </span>
         </h2>
         <p className="mb-12 text-center text-[#8888aa]">
-          Tecnología profesional para tu proyecto
+          24 pistas para tu sonido
         </p>
 
         <div className="mb-10 rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm p-8">
