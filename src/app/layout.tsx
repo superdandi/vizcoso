@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
+import BladeRunnerRain from "@/components/BladeRunnerRain";
 import DigitalRain from "@/components/DigitalRain";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
@@ -27,6 +28,9 @@ export default function RootLayout({
   return (
     <html lang="es" className={cn("scroll-smooth", "font-sans", geist.variable, "dark")}>
       <body className="scanline-overlay antialiased">
+        {/* Coexistencia: BladeRunnerRain (fondo) + DigitalRain (frente) */}
+        {/* Para reemplazar: comenta DigitalRain y deja solo BladeRunnerRain */}
+        <BladeRunnerRain />
         <DigitalRain />
         {children}
       </body>
