@@ -28,10 +28,9 @@ export default function RootLayout({
   return (
     <html lang="es" className={cn("scroll-smooth", "font-sans", geist.variable, "dark")}>
       <body className="scanline-overlay antialiased">
-        {/* Coexistencia: BladeRunnerRain (fondo) + DigitalRain (frente) */}
-        {/* Para reemplazar: comenta DigitalRain y deja solo BladeRunnerRain */}
+        {/* Reemplazo: solo BladeRunnerRain — DigitalRain comentado */}
+        {/* <DigitalRain /> */}
         <BladeRunnerRain />
-        <DigitalRain />
         {children}
       </body>
     </html>

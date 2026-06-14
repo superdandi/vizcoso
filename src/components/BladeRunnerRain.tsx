@@ -27,28 +27,28 @@ export default function BladeRunnerRain() {
     const c = ctx;
     let animId: number;
     let drops: Raindrop[] = [];
-    const DENSITY = 0.35;
+    const DENSITY = 0.7;
 
     function initDrops(w: number, h: number) {
       const count = Math.floor(w * DENSITY);
       drops = Array.from({ length: count }, () => ({
         x: Math.random() * w,
         y: Math.random() * h * -1 - 50,
-        speed: 1 + Math.random() * 2.5,
-        length: 15 + Math.random() * 35,
-        opacity: 0.06 + Math.random() * 0.2,
-        width: 0.5 + Math.random() * 1.5,
+        speed: 1.5 + Math.random() * 3.5,
+        length: 20 + Math.random() * 40,
+        opacity: 0.10 + Math.random() * 0.25,
+        width: 0.8 + Math.random() * 1.8,
         colorIndex: Math.floor(Math.random() * COLORS.length),
       }));
     }
 
     function draw(w: number, h: number) {
-      c.fillStyle = "rgba(10, 10, 15, 0.06)";
+      c.fillStyle = "rgba(10, 10, 15, 0.04)";
       c.fillRect(0, 0, w, h);
 
       const glow = c.createRadialGradient(w / 2, h + 50, 0, w / 2, h + 50, h * 0.6);
-      glow.addColorStop(0, "rgba(255, 0, 255, 0.02)");
-      glow.addColorStop(0.4, "rgba(0, 255, 255, 0.015)");
+      glow.addColorStop(0, "rgba(255, 0, 255, 0.04)");
+      glow.addColorStop(0.4, "rgba(0, 255, 255, 0.025)");
       glow.addColorStop(1, "rgba(10, 10, 15, 0)");
       c.fillStyle = glow;
       c.fillRect(0, 0, w, h);
@@ -66,9 +66,9 @@ export default function BladeRunnerRain() {
         if (drop.y > h + drop.length) {
           drop.y = -drop.length;
           drop.x = Math.random() * w;
-          drop.speed = 1 + Math.random() * 2.5;
-          drop.length = 15 + Math.random() * 35;
-          drop.opacity = 0.06 + Math.random() * 0.2;
+          drop.speed = 1.5 + Math.random() * 3.5;
+          drop.length = 20 + Math.random() * 40;
+          drop.opacity = 0.10 + Math.random() * 0.25;
           drop.colorIndex = Math.floor(Math.random() * COLORS.length);
         }
       }
