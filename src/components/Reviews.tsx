@@ -3,7 +3,7 @@ import { reviews } from "@/data/reviews";
 
 export default function Reviews() {
   return (
-    <section id="reviews" className="border-t border-[#2a2a4a] bg-grid px-4 py-24">
+    <section id="reviews" className="scroll-mt-20 border-t border-[#2a2a4a] bg-grid px-4 py-24">
       <AnimateOnScroll animation="scale-in">
       <div className="mx-auto max-w-6xl">
         <h2 className="mb-2 text-center text-3xl font-bold sm:text-4xl">
