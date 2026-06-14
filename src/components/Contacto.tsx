@@ -4,7 +4,7 @@ export default function Contacto() {
   return (
     <section
       id="contacto"
-      className="scroll-mt-20 border-t border-[#2a2a4a] px-4 py-24"
+      className="scroll-mt-14 border-t border-[#2a2a4a] px-4 py-24"
     >
       <AnimateOnScroll>
       <div className="mx-auto max-w-4xl text-center">

@@ -73,7 +73,7 @@ export default function Bandcamp() {
   }, [api, onSelect]);
 
   return (
-    <section id="bandcamp" className="scroll-mt-20 border-t border-[#2a2a4a] px-4 py-24">
+    <section id="bandcamp" className="scroll-mt-14 border-t border-[#2a2a4a] px-4 py-24">
       <AnimateOnScroll>
         <div className="mx-auto max-w-4xl text-center">
         <h2 className="mb-2 text-3xl font-bold sm:text-4xl">
