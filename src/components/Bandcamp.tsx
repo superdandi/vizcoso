@@ -82,7 +82,7 @@ export default function Bandcamp() {
           </span>
         </h2>
         <p className="mb-10 text-[#8888aa]">
-          Escucha, descarga y apoya a los artistas en Bandcamp
+          Identidad propia, libertad creativa
         </p>
 
         <Carousel
