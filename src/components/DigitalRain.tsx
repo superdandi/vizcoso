@@ -56,7 +56,7 @@ export default function DigitalRain() {
 
     function draw(w: number, h: number) {
       const progress = Math.min(window.scrollY / Math.max(contactTop, 1), 1);
-      const intensity = progress * 0.2;
+      const intensity = progress * 0.16;
 
       const fillAlpha = 0.05 - intensity * 0.015;
       c.fillStyle = `rgba(10, 10, 15, ${fillAlpha})`;
@@ -75,7 +75,7 @@ export default function DigitalRain() {
           }
 
           const char = drop.chars[j];
-          const alphaScale = 0.02 + intensity * 0.98;
+          const alphaScale = 0.03 + intensity * 0.97;
 
           if (j === 0) {
             c.globalAlpha = alphaScale;
