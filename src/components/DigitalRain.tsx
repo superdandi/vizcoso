@@ -33,6 +33,12 @@ export default function DigitalRain() {
     const c = ctx;
     let animId: number;
     let drops: Drop[] = [];
+    let contactTop = 0;
+
+    function updateContactTop() {
+      const el = document.getElementById("contacto");
+      contactTop = el ? el.offsetTop : document.documentElement.scrollHeight;
+    }
 
     function initDrops(w: number, h: number) {
       const cols = Math.floor(w / FONT_SIZE);
@@ -49,7 +55,11 @@ export default function DigitalRain() {
     }
 
     function draw(w: number, h: number) {
-      c.fillStyle = "rgba(10, 10, 15, 0.035)";
+      const progress = Math.min(window.scrollY / Math.max(contactTop, 1), 1);
+      const intensity = progress;
+
+      const fillAlpha = 0.05 - intensity * 0.015;
+      c.fillStyle = `rgba(10, 10, 15, ${fillAlpha})`;
       c.fillRect(0, 0, w, h);
 
       c.font = `${FONT_SIZE}px "Courier New", monospace`;
@@ -65,22 +75,25 @@ export default function DigitalRain() {
           }
 
           const char = drop.chars[j];
+          const alphaScale = 0.02 + intensity * 0.98;
 
           if (j === 0) {
-            c.globalAlpha = 1;
+            c.globalAlpha = alphaScale;
             c.fillStyle = "#ffffff";
           } else if (j < 3) {
-            c.globalAlpha = 0.6 + 0.2 * (1 - j / 3);
+            const base = 0.6 + 0.2 * (1 - j / 3);
+            c.globalAlpha = base * alphaScale;
             c.fillStyle = "#00ff41";
           } else {
             const t = (j - 2) / (drop.length - 2);
-            c.globalAlpha = 0.05 + 0.5 * (1 - t);
+            const base = 0.05 + 0.5 * (1 - t);
+            c.globalAlpha = base * alphaScale;
             c.fillStyle = "#00ff41";
           }
           c.fillText(char, drop.x, y);
         }
 
-        drop.y += drop.speed;
+        drop.y += drop.speed * (0.05 + intensity * 0.95);
 
         if (drop.y > h + drop.length * FONT_SIZE) {
           drop.y = -drop.length * FONT_SIZE;
@@ -99,6 +112,7 @@ export default function DigitalRain() {
     let h = window.innerHeight;
     canvasEl.width = w;
     canvasEl.height = h;
+    updateContactTop();
     initDrops(w, h);
     draw(w, h);
 
@@ -107,6 +121,7 @@ export default function DigitalRain() {
       h = window.innerHeight;
       canvasEl.width = w;
       canvasEl.height = h;
+      updateContactTop();
     }
 
     window.addEventListener("resize", onResize);
