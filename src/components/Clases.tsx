@@ -3,7 +3,7 @@ import { clasesMusica } from "@/data/services";
 
 export default function Clases() {
   return (
-    <section id="clases" className="scroll-mt-14 border-t border-[#2a2a4a] bg-grid px-4 py-24">
+    <section id="clases" className="scroll-mt-14 border-t border-[#2a2a4a] px-4 py-24">
       <AnimateOnScroll animation="fade-left">
       <div className="mx-auto max-w-4xl">
         <h2 className="mb-2 text-center text-3xl font-bold sm:text-4xl">

@@ -77,7 +77,7 @@ const amenities = [
 
 export default function SalaEnsayo() {
   return (
-    <section className="border-t border-[#2a2a4a] bg-grid px-4 py-20">
+    <section className="scroll-mt-20 border-t border-[#2a2a4a] px-4 py-20">
       <AnimateOnScroll>
       <div className="mx-auto max-w-4xl text-center">
         <h2 className="mb-4 text-3xl font-bold sm:text-4xl">
