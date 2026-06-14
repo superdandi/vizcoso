@@ -56,15 +56,15 @@ export default function Footer() {
           href="https://maps.google.com?q=Vizcoso+Entertainment+Talca"
           target="_blank"
           rel="noopener noreferrer"
-          className="mb-6 inline-flex items-center gap-2 text-sm text-[#8888aa] transition-colors hover:text-[#00ffff]"
+          className="mb-6 inline-flex items-center gap-2 rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm px-4 py-2 text-sm text-[#c0c0d0] transition-all hover:border-[#ff00ff]/50 hover:text-[#ff00ff]"
         >
           <svg
             width="16"
             height="16"
             viewBox="0 0 24 24"
-            fill="currentColor"
+            fill="none"
           >
-            <path d="M12 0C7.58 0 4 3.58 4 8c0 5.25 8 16 8 16s8-10.75 8-16c0-4.42-3.58-8-8-8zm0 11c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z" />
+            <path d="M12 0C7.58 0 4 3.58 4 8c0 5.25 8 16 8 16s8-10.75 8-16c0-4.42-3.58-8-8-8zm0 11c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z" fill="currentColor" fill-rule="evenodd" />
           </svg>
           Ver en Google Maps
         </a>
