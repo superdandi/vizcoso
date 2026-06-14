@@ -20,7 +20,7 @@ export default function VideoProduccion() {
 
         <div className="grid gap-6 sm:grid-cols-2">
           {videoServicios.map((v, i) => (
-            <div key={i} className="card-fade-up rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm p-6 transition-all hover:border-[#ff00ff]/50">
+            <div key={i} className="card-fade-up rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm p-6">
               <h3 className="mb-3 text-lg font-bold text-[#00ffff]">
                 {v.title}
               </h3>
