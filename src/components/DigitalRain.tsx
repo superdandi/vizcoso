@@ -102,18 +102,27 @@ export default function DigitalRain() {
     initDrops(w, h);
     draw(w, h);
 
+    let resizeTimer: ReturnType<typeof setTimeout> | null = null;
+
     function onResize() {
-      w = window.innerWidth;
-      h = window.innerHeight;
-      canvasEl.width = w;
-      canvasEl.height = h;
-      initDrops(w, h);
+      if (resizeTimer) clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        const newW = window.innerWidth;
+        const newH = window.innerHeight;
+        if (newW === w && newH === h) return;
+        w = newW;
+        h = newH;
+        canvasEl.width = w;
+        canvasEl.height = h;
+        initDrops(w, h);
+      }, 250);
     }
 
     window.addEventListener("resize", onResize);
 
     return () => {
       cancelAnimationFrame(animId);
+      if (resizeTimer) clearTimeout(resizeTimer);
       window.removeEventListener("resize", onResize);
     };
   }, []);
