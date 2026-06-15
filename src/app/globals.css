@@ -330,16 +330,59 @@
   0%, 100% {
     box-shadow:
       0 0 5px rgba(255, 0, 255, 0.08),
-      inset 0 0 5px rgba(255, 0, 255, 0.02);
+      inset 0 0 5px rgba(255, 0, 255, 0.02),
+      0 4px 15px rgba(255, 0, 255, 0.05);
     border-color: rgba(42, 42, 74, 0.6);
   }
   50% {
     box-shadow:
       0 0 20px rgba(255, 0, 255, 0.15),
       0 0 40px rgba(255, 0, 255, 0.05),
-      inset 0 0 10px rgba(255, 0, 255, 0.03);
+      inset 0 0 10px rgba(255, 0, 255, 0.03),
+      0 6px 25px rgba(255, 0, 255, 0.12);
     border-color: rgba(255, 0, 255, 0.2);
   }
+}
+
+.card-glass {
+  position: relative;
+}
+.card-glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(255, 255, 255, 0.015) 2px,
+    rgba(255, 255, 255, 0.015) 4px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+.card-glass::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.55;
+  background:
+    linear-gradient(to right, #00ffff 0px, #00ffff 12px, transparent 12px) 0 0 no-repeat,
+    linear-gradient(to bottom, #00ffff 0px, #00ffff 12px, transparent 12px) 0 0 no-repeat,
+    linear-gradient(to left, #ff00ff 0px, #ff00ff 12px, transparent 12px) 100% 0 no-repeat,
+    linear-gradient(to bottom, #ff00ff 0px, #ff00ff 12px, transparent 12px) 100% 0 no-repeat,
+    linear-gradient(to right, #00ffff 0px, #00ffff 12px, transparent 12px) 0 100% no-repeat,
+    linear-gradient(to top, #00ffff 0px, #00ffff 12px, transparent 12px) 0 100% no-repeat,
+    linear-gradient(to left, #ff00ff 0px, #ff00ff 12px, transparent 12px) 100% 100% no-repeat,
+    linear-gradient(to top, #ff00ff 0px, #ff00ff 12px, transparent 12px) 100% 100% no-repeat,
+    radial-gradient(3px at calc(100% - 18px) 18px, #00ff88, transparent);
+}
+.card-glass-pulse {
+  animation: card-pulse 4s infinite ease-in-out;
 }
 
 @keyframes flicker-2 {

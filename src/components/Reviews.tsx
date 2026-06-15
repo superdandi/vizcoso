@@ -17,7 +17,7 @@ export default function Reviews() {
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {reviews.map((r, i) => (
-            <div key={i} className="card-scale-in flex flex-col rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm p-6">
+            <div key={i} className="card-glass card-glass-pulse card-scale-in flex flex-col rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm p-6">
               <div className="mb-3 flex items-center gap-1">
                 {Array.from({ length: 5 }).map((_, j) => (
                   <span

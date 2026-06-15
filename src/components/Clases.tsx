@@ -15,7 +15,7 @@ export default function Clases() {
            Lecciones personalizadas para todos los niveles
         </p>
 
-        <div className="overflow-hidden rounded-lg border border-[#2a2a4a]">
+        <div className="card-glass card-glass-pulse overflow-hidden rounded-lg border border-[#2a2a4a]">
           {clasesMusica.map((c, i) => (
             <div
               key={i}
