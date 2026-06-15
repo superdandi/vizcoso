@@ -24,7 +24,15 @@ export default function VideoProduccion() {
               <h3 className="mb-3 text-lg font-bold text-[#00ffff]">
                 {v.title}
               </h3>
-              <p className="mb-2 text-sm text-[#c0c0d0]">{v.description}</p>
+              {v.features ? (
+                <ul className="mb-3 space-y-1 text-sm leading-relaxed text-[#c0c0d0]">
+                  {v.features.map((f, j) => (
+                    <li key={j}>{"\u2022"} {f}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="mb-3 text-sm text-[#c0c0d0]">{v.description}</p>
+              )}
               {v.note && (
                 <p className="mb-2 text-xs italic text-[#ffaa00]">{v.note}</p>
               )}

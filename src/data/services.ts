@@ -15,6 +15,7 @@ export interface VideoService {
   description: string;
   price: string;
   note?: string;
+  features?: string[];
 }
 
 export const serviciosGrabacion: Service[] = [
@@ -70,9 +71,33 @@ export const clasesMusica: ClassItem[] = [
 
 export const videoServicios: VideoService[] = [
   {
-    title: "Producción de videos musicales",
-    description: "Preproducción, grabación y edición profesional",
+    title: "Videos musicales",
+    description: "Guión, dirección, rodaje y postproducción completa",
     price: "Desde $250.000 CLP",
+  },
+  {
+    title: "Video sesión musical",
+    description: "Captura multicámara en vivo en nuestro estudio con postproducción de audio y video",
+    price: "Desde $210.000 CLP",
+  },
+  {
+    title: "Videos de eventos",
+    description: "",
+    price: "Desde $180.000 CLP",
+    features: [
+      "Cobertura del evento con edición de highlights",
+      "Registro multicámara completo del evento",
+    ],
+  },
+  {
+    title: "Transmisión en directo",
+    description: "",
+    price: "Desde $25.000 CLP",
+    note: "valor por hora",
+    features: [
+      "Transmisión en vivo con mezcla de audio y video en tiempo real",
+      "Transmisión multicámara con producción en vivo",
+    ],
   },
   {
     title: "Video sesión musical",
