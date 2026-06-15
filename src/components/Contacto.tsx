@@ -34,13 +34,6 @@ export default function Contacto() {
             O contáctame directamente
           </h3>
           <p className="mb-2 flex items-center justify-center gap-2 text-sm text-[#c0c0d0]">
-            <svg className="h-4 w-4 text-[#00ffff]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M12 2a8 8 0 0 0-8 8c0 5 8 12 8 12s8-7 8-12a8 8 0 0 0-8-8z" />
-              <circle cx="12" cy="10" r="3" />
-            </svg>
-            Talca, Región del Maule, Chile
-          </p>
-          <p className="flex items-center justify-center gap-2 text-sm text-[#c0c0d0]">
             <svg className="h-4 w-4 text-[#ff00ff]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <rect x="2" y="4" width="20" height="16" rx="2" />
               <path d="M22 7l-10 7L2 7" />
@@ -51,6 +44,13 @@ export default function Contacto() {
             >
               vizcosoe@gmail.com
             </a>
+          </p>
+          <p className="flex items-center justify-center gap-2 text-sm text-[#c0c0d0]">
+            <svg className="h-4 w-4 text-[#00ffff]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 2a8 8 0 0 0-8 8c0 5 8 12 8 12s8-7 8-12a8 8 0 0 0-8-8z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            Talca, Región del Maule, Chile
           </p>
         </div>
       </div>

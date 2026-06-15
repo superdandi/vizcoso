@@ -32,8 +32,6 @@ export default function Hero() {
           Estudio de grabación &bull; Salas de ensayo &bull; Formación musical
         </p>
 
-        <p className="mt-1 text-sm text-[#ffaa00]">Talca, Chile</p>
-
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <a
             href="#servicios"

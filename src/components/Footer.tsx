@@ -70,7 +70,7 @@ export default function Footer() {
         </a>
 
         <p className="text-xs text-[#888]">
-          &copy; {new Date().getFullYear()} VIZCOSO Entertainment &mdash; Talca,
+          &copy; {new Date().getFullYear()} VIZCOSO Entertainment
           Chile
         </p>
         <p className="mt-1 text-xs text-[#666]">
