@@ -44,7 +44,7 @@ export default function Reviews() {
         </div>
 
         <p className="mt-8 text-center text-xs text-[#666]">
-          Basado en {reviews.length} opiniones en Google &mdash; Calificación promedio: 5.0 ★
+          Basado en {reviews.length} opiniones &bull; Promedio: 5.0 ★
         </p>
       </div>
       </AnimateOnScroll>

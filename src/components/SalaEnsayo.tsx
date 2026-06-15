@@ -115,7 +115,7 @@ export default function SalaEnsayo() {
         </div>
 
         <p className="mt-8 text-xs text-[#666]">
-          Lun–Jue 10:00–22:00 &bull; Vie–Sáb 10:00–2:00 &bull; Dom 10:00–22:00
+          Lun–Jue 10–22 &bull; Vie–Sáb 10–2 &bull; Dom 10–22
         </p>
       </div>
       </AnimateOnScroll>
