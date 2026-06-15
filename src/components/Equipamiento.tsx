@@ -29,10 +29,7 @@ export default function Equipamiento() {
               </h3>
               <ul className="mt-2 space-y-1 text-sm leading-relaxed text-[#c0c0d0]">
                 <li>{"\u2022"} Interfaz USB Tascam Model 24 → Mac Mini M4</li>
-                <li>{"\u2022"} 24 canales simultáneos (22 entradas + estéreo)</li>
-                <li>{"\u2022"} WAV 44.1 o 48 kHz / 24-bit</li>
-                <li>{"\u2022"} Faders long-throw de 100 mm, 16 preamps Ultra-HDDA</li>
-                <li>{"\u2022"} EQ sweepable, compresor one-knob, 16 efectos internos</li>
+                <li>{"\u2022"} 24 canales — 44.1/48 kHz, 24-bit</li>
                 <li>{"\u2022"} Lexicon MX200 (multiefectos externo)</li>
                 <li>{"\u2022"} DBX 166XS (compresor analógico 2 canales)</li>
                 <li>{"\u2022"} Monitoreo directo desde la consola (pre-DAW, latencia cero)</li>
@@ -56,9 +53,7 @@ export default function Equipamiento() {
             <ul className="space-y-1 text-sm leading-relaxed text-[#c0c0d0]">
               <li>{"\u2022"} Shure SM58 ×3, PG58, Shure 8700 (dinámicos)</li>
               <li>{"\u2022"} t.bone Nova Black (condensador vocal)</li>
-              <li>{"\u2022"} Micrófonos condensadores adicionales</li>
               <li>{"\u2022"} Cajas DI: Samson MD1, Samson MDA1, Arctic DB-02</li>
-              <li>{"\u2022"} Entrada directa a la mesa Tascam Model 24</li>
             </ul>
           </div>
 
@@ -77,7 +72,6 @@ export default function Equipamiento() {
               <li>{"\u2022"} PGA52 (kick), PGA57 (snare)</li>
               <li>{"\u2022"} PGA56×3 (toms)</li>
               <li>{"\u2022"} PGA81×2 overheads condensador (40 Hz – 18 kHz)</li>
-              <li>{"\u2022"} Cada micrófono en su propio canal en la Model 24</li>
             </ul>
           </div>
 
