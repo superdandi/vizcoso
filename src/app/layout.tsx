@@ -3,6 +3,7 @@ import "./globals.css";
 import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
 import DigitalRain from "@/components/DigitalRain";
+import ProximityGlow from "@/components/ProximityGlow";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
@@ -29,6 +30,7 @@ export default function RootLayout({
     <html lang="es" className={cn("scroll-smooth", "font-sans", geist.variable, "dark")}>
       <body className="scanline-overlay antialiased">
         <DigitalRain />
+        <ProximityGlow />
         {children}
       </body>
     </html>
