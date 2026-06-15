@@ -29,7 +29,7 @@ export default function Clases() {
           ))}
         </div>
 
-        <p className="mt-4 text-center text-xs text-[#555]">
+        <p className="mt-4 text-center text-xs text-[#666]">
           Valor por hora &bull; Clases presenciales
         </p>
       </div>
