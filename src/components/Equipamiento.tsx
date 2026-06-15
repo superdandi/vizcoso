@@ -27,18 +27,17 @@ export default function Equipamiento() {
               <h3 className="text-xl font-bold text-[#00ffff]">
                 Tascam Model 24
               </h3>
-              <p className="mt-1 text-sm leading-relaxed text-[#c0c0d0]">
-                Grabamos usando la interfaz USB de la <strong className="text-[#00ffff]">Tascam Model 24</strong>{" "}
-                conectada a un <strong className="text-[#ffaa00]">Mac Mini M4</strong>, capturando hasta{" "}
-                <strong className="text-[#ff00ff]">24 canales simultáneos</strong>{" "}
-                (22 entradas + mezcla estéreo) en{" "}
-                <strong className="text-[#ff00ff]">WAV 44.1 o 48 kHz / 24-bit</strong>.
-                Sus <strong className="text-[#00ffff]">faders de 100 mm (long-throw)</strong> y su amplio layout
-                (57 cm) hacen que mezclar sea cómodo y preciso. 16 preamplificadores Ultra-HDDA,
-                EQ sweepable, compresor one-knob y 16 efectos. Además contamos con un{" "}
-                <strong className="text-[#ffaa00]">Lexicon MX200</strong> (multiefectos) y un{" "}
-                <strong className="text-[#ffaa00]">DBX 166XS</strong> (compresor analógico de 2 canales).
-              </p>
+              <ul className="mt-2 space-y-1 text-sm leading-relaxed text-[#c0c0d0]">
+                <li>{"\u2022"} Interfaz USB Tascam Model 24 → Mac Mini M4</li>
+                <li>{"\u2022"} 24 canales simultáneos (22 entradas + estéreo)</li>
+                <li>{"\u2022"} WAV 44.1 o 48 kHz / 24-bit</li>
+                <li>{"\u2022"} Faders long-throw de 100 mm, 16 preamps Ultra-HDDA</li>
+                <li>{"\u2022"} EQ sweepable, compresor one-knob, 16 efectos internos</li>
+                <li>{"\u2022"} Lexicon MX200 (multiefectos externo)</li>
+                <li>{"\u2022"} DBX 166XS (compresor analógico 2 canales)</li>
+                <li>{"\u2022"} Monitoreo directo desde la consola (pre-DAW, latencia cero)</li>
+                <li>{"\u2022"} Audífonos: AudioTechnica ATH-M20X ×2, SKP RF 30 Studio</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -54,11 +53,13 @@ export default function Equipamiento() {
               </svg>
               Vocal &amp; Instrumento
             </h4>
-            <p className="text-sm leading-relaxed text-[#c0c0d0]">
-              Graba tu voz o instrumento con micrófonos <strong className="text-[#00ffff]">Shure SM58</strong>,
-              dinámicos y condensadores, más <strong className="text-[#ffaa00]">cajas DI</strong> para guitarra,
-              bajo o teclado directo a la mesa. Ideal para maquetas y producción urbana.
-            </p>
+            <ul className="space-y-1 text-sm leading-relaxed text-[#c0c0d0]">
+              <li>{"\u2022"} Shure SM58 ×3, PG58, Shure 8700 (dinámicos)</li>
+              <li>{"\u2022"} t.bone Nova Black (condensador vocal)</li>
+              <li>{"\u2022"} Micrófonos condensadores adicionales</li>
+              <li>{"\u2022"} Cajas DI: Samson MD1, Samson MDA1, Arctic DB-02</li>
+              <li>{"\u2022"} Entrada directa a la mesa Tascam Model 24</li>
+            </ul>
           </div>
 
           <div className="card-fade-up rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm p-6">
@@ -71,12 +72,13 @@ export default function Equipamiento() {
               </svg>
               Batería completa
             </h4>
-            <p className="text-sm leading-relaxed text-[#c0c0d0]">
-              Microfonía profesional con <strong className="text-[#00ffff]">Shure PGADrumKit 7</strong>:{" "}
-              PGA52 (kick), PGA56×3 (toms), PGA57 (snare) y{" "}
-              <strong className="text-[#ff00ff]">PGA81×2</strong> overheads condensador (40 Hz – 18 kHz).
-              Cada pieza en su propio canal, gracias a los 24 de la Model 24.
-            </p>
+            <ul className="space-y-1 text-sm leading-relaxed text-[#c0c0d0]">
+              <li>{"\u2022"} Shure PGADrumKit 7 completo</li>
+              <li>{"\u2022"} PGA52 (kick), PGA57 (snare)</li>
+              <li>{"\u2022"} PGA56×3 (toms)</li>
+              <li>{"\u2022"} PGA81×2 overheads condensador (40 Hz – 18 kHz)</li>
+              <li>{"\u2022"} Cada micrófono en su propio canal en la Model 24</li>
+            </ul>
           </div>
 
           <div className="card-fade-up rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm p-6">
@@ -89,10 +91,12 @@ export default function Equipamiento() {
               </svg>
               Banda completa
             </h4>
-            <p className="text-sm leading-relaxed text-[#c0c0d0]">
-              Voces, batería microfonada y DI conectadas simultáneamente. La banda completa
-              grabada como sesión en vivo, cada instrumento separado y limpio.
-            </p>
+            <ul className="space-y-1 text-sm leading-relaxed text-[#c0c0d0]">
+              <li>{"\u2022"} Tascam Model 24 — 24 canales simultáneos</li>
+              <li>{"\u2022"} Shure PGADrumKit 7 (kick, snare, toms, OH)</li>
+              <li>{"\u2022"} Shure SM58 ×3 + Nova Black + condensadores para voces</li>
+              <li>{"\u2022"} Cajas DI: Samson MD1, Samson MDA1, Arctic DB-02</li>
+            </ul>
           </div>
 
           <div className="card-fade-up rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm p-6">
@@ -105,10 +109,10 @@ export default function Equipamiento() {
               </svg>
               Banda + Live Streaming
             </h4>
-            <p className="text-sm leading-relaxed text-[#c0c0d0]">
-              Todo lo anterior mientras transmitimos en vivo. La banda tocando, cada canal
-              capturado y el mundo escuchando en tiempo real.
-            </p>
+            <ul className="space-y-1 text-sm leading-relaxed text-[#c0c0d0]">
+              <li>{"\u2022"} Tascam Model 24 vía USB al Mac Mini M4</li>
+              <li>{"\u2022"} Streaming multicanal en tiempo real</li>
+            </ul>
           </div>
         </div>
       </div>
