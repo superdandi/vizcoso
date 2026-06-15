@@ -14,7 +14,7 @@ export default function Equipamiento() {
           24 pistas para tu sonido
         </p>
 
-        <div className="card-glass card-glass-pulse mb-10 rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm p-8">
+        <div className="card-glass card-glow mb-10 rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm p-8">
           <div className="flex flex-col items-center gap-4 sm:flex-row">
             <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-lg border border-[#ff00ff] bg-black/30 backdrop-blur-sm">
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00ffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -39,7 +39,7 @@ export default function Equipamiento() {
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2">
-          <div className="card-glass card-glass-pulse card-fade-up rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm p-6">
+          <div className="card-glass card-glow card-fade-up rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm p-6">
             <h4 className="mb-2 flex items-center gap-1.5 text-lg font-bold text-[#ff00ff]">
               <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="9" y="2" width="6" height="12" rx="3" />
@@ -57,7 +57,7 @@ export default function Equipamiento() {
             </ul>
           </div>
 
-          <div className="card-glass card-glass-pulse card-fade-up rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm p-6">
+          <div className="card-glass card-glow card-fade-up rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm p-6">
             <h4 className="mb-2 flex items-center gap-1.5 text-lg font-bold text-[#ffaa00]">
               <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <ellipse cx="12" cy="7" rx="8" ry="4" />
@@ -75,7 +75,7 @@ export default function Equipamiento() {
             </ul>
           </div>
 
-          <div className="card-glass card-glass-pulse card-fade-up rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm p-6">
+          <div className="card-glass card-glow card-fade-up rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm p-6">
             <h4 className="mb-2 flex items-center gap-1.5 text-lg font-bold text-[#00ffff]">
               <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M12 2v15" />
@@ -93,7 +93,7 @@ export default function Equipamiento() {
             </ul>
           </div>
 
-          <div className="card-glass card-glass-pulse card-fade-up rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm p-6">
+          <div className="card-glass card-glow card-fade-up rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm p-6">
             <h4 className="mb-2 flex items-center gap-1.5 text-lg font-bold text-[#ff00ff]">
               <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M2 15a10 10 0 0 1 20 0" />
