@@ -6,11 +6,13 @@ function smootherstep(t: number): number {
   return t * t * t * (t * (t * 6 - 15) + 10);
 }
 
+const GLOW_FACTOR = 0.82;
+
 const FULL_GLOW = `
-  0 0 10px rgba(255, 0, 255, 0.15),
-  inset 0 0 8px rgba(255, 0, 255, 0.04),
-  0 8px 35px rgba(255, 0, 255, 0.2),
-  0 0 25px rgba(255, 0, 255, 0.1)
+  0 0 ${10 * GLOW_FACTOR}px rgba(255, 0, 255, ${0.15 * GLOW_FACTOR}),
+  inset 0 0 ${8 * GLOW_FACTOR}px rgba(255, 0, 255, ${0.04 * GLOW_FACTOR}),
+  0 ${8 * GLOW_FACTOR}px ${35 * GLOW_FACTOR}px rgba(255, 0, 255, ${0.2 * GLOW_FACTOR}),
+  0 0 ${25 * GLOW_FACTOR}px rgba(255, 0, 255, ${0.1 * GLOW_FACTOR})
 `;
 
 export default function ProximityGlow() {
@@ -32,13 +34,13 @@ export default function ProximityGlow() {
         const cardCenter = rect.top + rect.height / 2;
         const dist = Math.abs(cardCenter - vpCenter);
         const raw = Math.max(0, 1 - dist / maxDist);
-        const t = Math.max(0.03, smootherstep(raw));
+        const t = Math.max(0.03, Math.pow(smootherstep(raw), 1.6));
 
         card.style.boxShadow = `
-          0 0 ${10 * t}px rgba(255, 0, 255, ${0.15 * t}),
-          inset 0 0 ${8 * t}px rgba(255, 0, 255, ${0.04 * t}),
-          0 ${8 * t}px ${35 * t}px rgba(255, 0, 255, ${0.2 * t}),
-          0 0 ${25 * t}px rgba(255, 0, 255, ${0.1 * t})
+          0 0 ${10 * t * GLOW_FACTOR}px rgba(255, 0, 255, ${0.15 * t * GLOW_FACTOR}),
+          inset 0 0 ${8 * t * GLOW_FACTOR}px rgba(255, 0, 255, ${0.04 * t * GLOW_FACTOR}),
+          0 ${8 * t * GLOW_FACTOR}px ${35 * t * GLOW_FACTOR}px rgba(255, 0, 255, ${0.2 * t * GLOW_FACTOR}),
+          0 0 ${25 * t * GLOW_FACTOR}px rgba(255, 0, 255, ${0.1 * t * GLOW_FACTOR})
         `;
       }
 
