@@ -35,13 +35,13 @@ export default function Hero() {
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <a
             href="#servicios"
-            className="card-glass card-glass-pulse rounded border border-[#2a2a4a] bg-black/30 backdrop-blur-sm px-6 py-2 text-sm font-semibold text-[#ff00ff] transition-all hover:border-[#ff00ff]/50"
+            className="card-glass card-glow card-glass-pulse rounded border border-[#2a2a4a] bg-black/30 backdrop-blur-sm px-6 py-2 text-sm font-semibold text-[#ff00ff] transition-all hover:border-[#ff00ff]/50"
           >
             Ver servicios
           </a>
           <a
             href="#contacto"
-            className="card-glass card-glass-pulse rounded border border-[#2a2a4a] bg-black/30 backdrop-blur-sm px-6 py-2 text-sm font-semibold text-[#00ffff] transition-all hover:border-[#ff00ff]/50"
+            className="card-glass card-glow card-glass-pulse rounded border border-[#2a2a4a] bg-black/30 backdrop-blur-sm px-6 py-2 text-sm font-semibold text-[#00ffff] transition-all hover:border-[#ff00ff]/50"
           >
             Agendar
           </a>
