@@ -27,7 +27,7 @@ export default function SobreMi() {
           <p className="mb-4 text-sm text-[#ffaa00]">
             Músico, productor y gestor cultural
           </p>
-          <p className="mx-auto max-w-2xl leading-relaxed text-[#c0c0d0]">
+          <p className="mx-auto max-w-2xl text-justify leading-relaxed text-[#c0c0d0]">
             Con formación en informática y múltiples talleres creativos y de
             gestión cultural, y más de dos décadas de experiencia en proyectos
             interdisciplinarios, fundé Vizcoso Entertainment como un espacio
