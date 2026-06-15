@@ -88,7 +88,7 @@ export default function SalaEnsayo() {
         <p className="mb-6 text-[#8888aa]">
           Espacio amplio, equipado y acogedor para tus ensayos
         </p>
-        <div className="inline-block rounded-lg border border-[#ff00ff] bg-black/30 backdrop-blur-sm px-12 py-6">
+        <div className="card-glass card-glow inline-block rounded-lg border border-[#ff00ff] bg-black/30 backdrop-blur-sm px-12 py-6">
           <span className="text-5xl font-black text-[#00ffff]">
             {salaEnsayo.price}
           </span>
@@ -105,7 +105,7 @@ export default function SalaEnsayo() {
             {amenities.map((a) => (
               <div
                 key={a.label}
-                className="card-scale-in flex flex-col items-center gap-1 rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm px-2 py-3"
+                className="card-glass card-glow card-scale-in flex flex-col items-center gap-1 rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm px-2 py-3"
               >
                 <span className="flex items-center justify-center text-[#00ffff]">{a.icon}</span>
                 <span className="text-xs text-[#8888aa]">{a.label}</span>
