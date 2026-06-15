@@ -371,14 +371,14 @@
   z-index: 2;
   opacity: 0.55;
   background:
-    linear-gradient(to right, #00ffff 0px, #00ffff 12px, transparent 12px) 0 0 no-repeat,
-    linear-gradient(to bottom, #00ffff 0px, #00ffff 12px, transparent 12px) 0 0 no-repeat,
-    linear-gradient(to left, #ff00ff 0px, #ff00ff 12px, transparent 12px) 100% 0 no-repeat,
-    linear-gradient(to bottom, #ff00ff 0px, #ff00ff 12px, transparent 12px) 100% 0 no-repeat,
-    linear-gradient(to right, #00ffff 0px, #00ffff 12px, transparent 12px) 0 100% no-repeat,
-    linear-gradient(to top, #00ffff 0px, #00ffff 12px, transparent 12px) 0 100% no-repeat,
-    linear-gradient(to left, #ff00ff 0px, #ff00ff 12px, transparent 12px) 100% 100% no-repeat,
-    linear-gradient(to top, #ff00ff 0px, #ff00ff 12px, transparent 12px) 100% 100% no-repeat,
+    linear-gradient(to right, #00ffff 0px, #00ffff 12px, transparent 12px) 0 0 / 12px 2px no-repeat,
+    linear-gradient(to bottom, #00ffff 0px, #00ffff 12px, transparent 12px) 0 0 / 2px 12px no-repeat,
+    linear-gradient(to left, #ff00ff 0px, #ff00ff 12px, transparent 12px) 100% 0 / 12px 2px no-repeat,
+    linear-gradient(to bottom, #ff00ff 0px, #ff00ff 12px, transparent 12px) 100% 0 / 2px 12px no-repeat,
+    linear-gradient(to right, #00ffff 0px, #00ffff 12px, transparent 12px) 0 100% / 12px 2px no-repeat,
+    linear-gradient(to top, #00ffff 0px, #00ffff 12px, transparent 12px) 0 100% / 2px 12px no-repeat,
+    linear-gradient(to left, #ff00ff 0px, #ff00ff 12px, transparent 12px) 100% 100% / 12px 2px no-repeat,
+    linear-gradient(to top, #ff00ff 0px, #ff00ff 12px, transparent 12px) 100% 100% / 2px 12px no-repeat,
     radial-gradient(3px at calc(100% - 18px) 18px, #00ff88, transparent);
 }
 .card-glass-pulse {
