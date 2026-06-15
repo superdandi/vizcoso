@@ -111,6 +111,7 @@ export default function Equipamiento() {
             </h4>
             <ul className="space-y-1 text-sm leading-relaxed text-[#c0c0d0]">
               <li>{"\u2022"} Tascam Model 24 vía USB al Mac Mini M4</li>
+              <li>{"\u2022"} Fibra óptica simétrica — 940 Mbps (Fibra Gamer)</li>
               <li>{"\u2022"} Streaming multicanal en tiempo real</li>
             </ul>
           </div>
