@@ -115,7 +115,7 @@ export default function SalaEnsayo() {
         </div>
 
         <p className="mt-8 text-xs text-[#555]">
-          Climatizado &bull; Equipo incluido &bull; Ambiente acogedor
+          Lun–Jue 10:00–22:00 &bull; Vie–Sáb 10:00–2:00 &bull; Dom 10:00–22:00
         </p>
       </div>
       </AnimateOnScroll>
