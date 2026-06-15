@@ -28,8 +28,11 @@ export default function Hero() {
           </span>
         </h1>
 
-        <p className="mt-4 max-w-xl text-lg text-[#8888aa]">
-          Estudio de grabación &bull; Salas de ensayo &bull; Formación musical
+        <p className="mt-4 text-lg text-[#8888aa]">
+          Estudio profesional en Talca &middot; 5.0 &starf; (8 opiniones)
+        </p>
+        <p className="mt-1 text-sm text-[#666]">
+          Grabaci&oacute;n &middot; Ensayo &middot; Clases &middot; Producci&oacute;n de video &middot; Sello discogr&aacute;fico
         </p>
 
         <div className="mt-8 flex flex-wrap justify-center gap-4">
@@ -43,7 +46,7 @@ export default function Hero() {
             href="#contacto"
             className="card-glass card-glow card-glass-pulse rounded border border-[#2a2a4a] bg-black/30 backdrop-blur-sm px-6 py-2 text-sm font-semibold text-[#00ffff] transition-all hover:border-[#ff00ff]/50"
           >
-            Agendar
+            Agenda tu sesi&oacute;n
           </a>
         </div>
       </div>

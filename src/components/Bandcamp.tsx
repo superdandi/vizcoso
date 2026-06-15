@@ -84,8 +84,11 @@ export default function Bandcamp() {
         <p className="mb-2 text-[#8888aa]">
           Identidad propia, libertad creativa
         </p>
-        <p className="mb-10 text-sm text-[#c0c0d0]">
+        <p className="mb-6 text-sm text-[#c0c0d0]">
           Sello musical enfocado en la producción independiente. Distribuimos y promovemos el trabajo de artistas emergentes con identidad propia y libertad creativa.
+        </p>
+        <p className="mb-10 text-xs text-[#ffaa00] tracking-wide">
+          4 &aacute;lbumes lanzados &middot; YOU VANNI &middot; INACID &middot; Artesano &middot; Animales &middot; Producci&oacute;n independiente desde Talca
         </p>
 
         <Carousel

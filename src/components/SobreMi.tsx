@@ -24,8 +24,11 @@ export default function SobreMi() {
           <h3 className="mb-2 text-xl font-bold text-[#00ffff]">
             Daniel Cobos
           </h3>
-          <p className="mb-4 text-sm text-[#ffaa00]">
+          <p className="mb-1 text-sm text-[#ffaa00]">
             Músico, productor y gestor cultural
+          </p>
+          <p className="mb-4 text-xs uppercase tracking-[0.15em] text-[#8888aa]">
+            20+ a&ntilde;os de experiencia &middot; Talca, Chile
           </p>
           <p className="mx-auto max-w-2xl text-justify leading-relaxed text-[#c0c0d0]">
             Con formación en informática y múltiples talleres creativos y de
