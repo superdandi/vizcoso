@@ -12,6 +12,7 @@ export interface ClassItem {
 
 export interface VideoService {
   title: string;
+  description: string;
   price: string;
   note?: string;
 }
@@ -33,12 +34,12 @@ export const serviciosGrabacion: Service[] = [
     price: "Desde $50.000 CLP",
   },
   {
-    title: "Grabación Mezcla y Master producción urbano",
+    title: "Grabación, Mezcla y Master — Producción Urbano",
     description: "3 horas de estudio",
     price: "Desde $120.000 CLP",
   },
   {
-    title: "Grabación Mezcla y Master producción grupo musical",
+    title: "Grabación, Mezcla y Master — Grupo Musical",
     description: "4 horas de estudio",
     price: "Desde $150.000 CLP",
   },
@@ -69,19 +70,23 @@ export const clasesMusica: ClassItem[] = [
 
 export const videoServicios: VideoService[] = [
   {
-    title: "Producción de vídeos musicales",
+    title: "Producción de videos musicales",
+    description: "Preproducción, grabación y edición profesional",
     price: "Desde $250.000 CLP",
   },
   {
     title: "Video sesión musical",
+    description: "Captura en vivo de tu sesión en el estudio",
     price: "Desde $210.000 CLP",
   },
   {
-    title: "Producción de vídeos de eventos",
+    title: "Producción de videos de eventos",
+    description: "Cobertura completa con múltiples cámaras",
     price: "Desde $180.000 CLP",
   },
   {
     title: "Transmisión en directo",
+    description: "Streaming en vivo multicámara para tu evento",
     price: "Desde $25.000 CLP",
     note: "valor por hora",
   },

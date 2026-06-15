@@ -38,7 +38,7 @@ export default function Equipamiento() {
           </div>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 vignette">
+        <div className="grid gap-6 sm:grid-cols-2">
           <div className="card-fade-up rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm p-6">
             <h4 className="mb-2 flex items-center gap-1.5 text-lg font-bold text-[#ff00ff]">
               <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

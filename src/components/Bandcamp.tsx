@@ -81,8 +81,11 @@ export default function Bandcamp() {
             Sello VIZCOSO
           </span>
         </h2>
-        <p className="mb-10 text-[#8888aa]">
+        <p className="mb-2 text-[#8888aa]">
           Identidad propia, libertad creativa
+        </p>
+        <p className="mb-10 text-sm text-[#c0c0d0]">
+          Sello musical enfocado en la producción independiente. Distribuimos y promovemos el trabajo de artistas emergentes con identidad propia y libertad creativa.
         </p>
 
         <Carousel

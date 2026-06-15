@@ -5,10 +5,12 @@ import { useState, useEffect } from "react";
 const sections = [
   { id: "servicios", label: "Servicios" },
   { id: "equipamiento", label: "Equipamiento" },
+  { id: "sala-ensayo", label: "Sala de Ensayo" },
   { id: "clases", label: "Clases" },
   { id: "video", label: "Video" },
-  { id: "reviews", label: "Reviews" },
+  { id: "reviews", label: "Opiniones" },
   { id: "bandcamp", label: "Sello" },
+  { id: "sobre-mi", label: "Sobre Mí" },
   { id: "contacto", label: "Contacto" },
 ];
 

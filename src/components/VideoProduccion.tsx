@@ -24,6 +24,7 @@ export default function VideoProduccion() {
               <h3 className="mb-3 text-lg font-bold text-[#00ffff]">
                 {v.title}
               </h3>
+              <p className="mb-2 text-sm text-[#c0c0d0]">{v.description}</p>
               {v.note && (
                 <p className="mb-2 text-xs italic text-[#ffaa00]">{v.note}</p>
               )}
