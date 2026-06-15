@@ -99,20 +99,4 @@ export const videoServicios: VideoService[] = [
       "Transmisión multicámara con producción en vivo",
     ],
   },
-  {
-    title: "Video sesión musical",
-    description: "Captura en vivo de tu sesión en el estudio",
-    price: "Desde $210.000 CLP",
-  },
-  {
-    title: "Producción de videos de eventos",
-    description: "Cobertura completa con múltiples cámaras",
-    price: "Desde $180.000 CLP",
-  },
-  {
-    title: "Transmisión en directo",
-    description: "Streaming en vivo multicámara para tu evento",
-    price: "Desde $25.000 CLP",
-    note: "valor por hora",
-  },
 ];
