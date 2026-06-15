@@ -33,7 +33,6 @@ export default function Equipamiento() {
                 <li>{"\u2022"} Lexicon MX200 (multiefectos externo)</li>
                 <li>{"\u2022"} DBX 166XS (compresor analógico 2 canales)</li>
                 <li>{"\u2022"} Monitoreo directo desde la consola (pre-DAW, latencia cero)</li>
-                <li>{"\u2022"} Audífonos: AudioTechnica ATH-M20X ×2, SKP RF 30 Studio</li>
               </ul>
             </div>
           </div>
@@ -54,6 +53,7 @@ export default function Equipamiento() {
               <li>{"\u2022"} Shure SM58 ×3, PG58, Shure 8700 (dinámicos)</li>
               <li>{"\u2022"} t.bone Nova Black (condensador vocal)</li>
               <li>{"\u2022"} Cajas DI: Samson MD1, Samson MDA1, Arctic DB-02</li>
+              <li>{"\u2022"} Audífonos: AudioTechnica ATH-M20X ×2, SKP RF 30 Studio</li>
             </ul>
           </div>
 
