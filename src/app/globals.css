@@ -10,7 +10,7 @@
   --color-neon-magenta: #ff00ff;
   --color-neon-cyan: #00ffff;
   --color-neon-amber: #ffaa00;
-  --color-body: #e6a800;
+  --color-body: #00dd88;
   --color-text-dim: #8888aa;
   --color-border: #2a2a4a;
 
@@ -24,7 +24,7 @@
     font-family: var(--font-sans);
     scroll-behavior: smooth;
     background-color: var(--color-bg);
-    color: var(--color-body);
+    color: #e0e0e0;
   }
 
   h1, h2, h3, h4 {
