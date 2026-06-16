@@ -69,13 +69,13 @@ export default function Footer() {
           Vizcoso Entertainment
         </a>
 
-        <p className="text-xs text-[#888]">
-          &copy; {new Date().getFullYear()} VIZCOSO Entertainment
-          Chile
-        </p>
-        <p className="mt-1 text-xs text-[#666]">
-          Producción Musical & Audiovisual • Gestión Cultural
-        </p>
+<p className="font-mono text-xs text-[#888]">
+  &copy; {new Date().getFullYear()} VIZCOSO Entertainment
+  Chile
+</p>
+<p className="font-mono mt-1 text-xs text-[#666]">
+  Producción Musical & Audiovisual • Gestión Cultural
+</p>
       </div>
     </footer>
   );

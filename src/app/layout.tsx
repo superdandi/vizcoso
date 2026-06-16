@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Geist } from "next/font/google";
+import { Rajdhani, VT323 } from "next/font/google";
 import { cn } from "@/lib/utils";
 import DigitalRain from "@/components/DigitalRain";
 import ProximityGlow from "@/components/ProximityGlow";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const rajdhani = Rajdhani({subsets:['latin'],weight:['300','400','500','600','700'],variable:'--font-sans'});
+const vt323 = VT323({subsets:['latin'],weight:'400',variable:'--font-mono'});
 
 export const metadata: Metadata = {
   title: "VIZCOSO Entertainment — Estudio Musical & Producción",
@@ -27,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es" className={cn("scroll-smooth", "font-sans", geist.variable, "dark")}>
+    <html lang="es" className={cn("scroll-smooth", "font-sans", rajdhani.variable, vt323.variable, "dark")}>
       <body className="scanline-overlay antialiased">
         <DigitalRain />
         <ProximityGlow />

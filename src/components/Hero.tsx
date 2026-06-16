@@ -15,9 +15,9 @@ export default function Hero() {
       <div className="pointer-events-none absolute inset-0 vignette" />
 
       <div className="relative z-10 text-center">
-        <p className="mb-2 text-sm tracking-[0.3em] text-[#8888aa]">
-            PRODUCCIÓN MUSICAL & AUDIOVISUAL • GESTIÓN CULTURAL
-        </p>
+<p className="mb-2 font-mono text-sm tracking-[0.3em] text-[#8888aa]">
+    PRODUCCIÓN MUSICAL & AUDIOVISUAL • GESTIÓN CULTURAL
+</p>
 
         <h1 className="relative">
           <span
