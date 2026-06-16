@@ -11,16 +11,9 @@ export default function Reviews() {
             Opiniones
           </span>
         </h2>
-        <p className="mb-6 text-center text-[#8888aa]">
+        <p className="mb-12 text-center text-[#8888aa]">
           Lo que dicen quienes ya han vivido la experiencia VIZCOSO
         </p>
-
-        <div className="card-glass card-glow mx-auto mb-10 max-w-md rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm px-8 py-5 text-center">
-          <span className="text-3xl font-black text-[#ffaa00]">5.0 &starf;</span>
-          <span className="ml-2 text-sm text-[#8888aa]">
-            basado en {reviews.length} opiniones
-          </span>
-        </div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {reviews.map((r, i) => (

@@ -28,11 +28,8 @@ export default function Hero() {
           </span>
         </h1>
 
-        <p className="mt-4 text-lg text-[#8888aa]">
-          Estudio profesional en Talca &middot; 5.0 &starf; (8 opiniones)
-        </p>
-        <p className="mt-1 text-sm text-[#666]">
-          Grabaci&oacute;n &middot; Ensayo &middot; Clases &middot; Producci&oacute;n de video &middot; Sello discogr&aacute;fico
+        <p className="mt-4 max-w-xl text-lg text-[#8888aa]">
+          Estudio de grabaci&oacute;n &bull; Salas de ensayo &bull; Formaci&oacute;n musical
         </p>
 
         <div className="mt-8 flex flex-wrap justify-center gap-4">
@@ -48,6 +45,13 @@ export default function Hero() {
           >
             Agenda tu sesi&oacute;n
           </a>
+        </div>
+
+        <div className="mt-6 flex justify-center">
+          <span className="inline-flex items-center gap-1.5 rounded border border-[#2a2a4a] bg-black/30 backdrop-blur-sm px-3 py-1.5 text-xs">
+            <span className="text-[#ffaa00]">&starf;&starf;&starf;&starf;&starf;</span>
+            <span className="text-[#666]">8 opiniones</span>
+          </span>
         </div>
       </div>
 
