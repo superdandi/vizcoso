@@ -33,11 +33,10 @@ export default function ProximityGlow() {
           const freq = 0.3 + t * 3.7;
           const rawPulse = Math.sin(now * 0.001 * freq * Math.PI * 2);
           const halfWave = Math.max(0, rawPulse);
-          const pulse = Math.pow(halfWave, 4);
-          const glowFloor = 0.05;
-          const glowCeiling = t * GLOW_FACTOR;
-          const envelope = glowFloor + pulse * (glowCeiling - glowFloor);
-          const haloPulse = Math.pow(Math.max(0, Math.sin((now * 0.001 * freq * Math.PI * 2) + 0.3)), 8);
+          const pulseBoost = Math.pow(halfWave, 4) * 0.6 * t;
+          const envelope = s + pulseBoost;
+          const haloWave = Math.max(0, Math.sin((now * 0.001 * freq * Math.PI * 2) + 0.3));
+          const haloPulse = Math.pow(haloWave, 8);
           card.style.boxShadow = `
             0 0 ${10 * envelope}px rgba(255, 0, 255, ${0.15 * envelope}),
             inset 0 0 ${8 * envelope}px rgba(255, 0, 255, ${0.04 * envelope}),

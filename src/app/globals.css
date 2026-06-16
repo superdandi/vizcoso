@@ -398,19 +398,22 @@
 .card-glass-pulse {
   animation: card-pulse 4s infinite ease-in-out;
 }
+@keyframes dot-pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.85; }
+}
+
 .card-glass-action::after {
   content: "";
   position: absolute;
+  inset: 0;
+  border-radius: inherit;
   pointer-events: none;
   z-index: 2;
   opacity: 0.55;
-  width: 5px;
-  height: 5px;
-  background: #00ffff;
-  top: 15px;
-  right: 15px;
-  transform: rotate(45deg);
-  box-shadow: 0 0 6px #00ffff;
+  background:
+    radial-gradient(3px at calc(100% - 18px) 18px, #00ff88, transparent);
+  animation: dot-pulse 2s ease-in-out infinite;
 }
 .card-glow {
   transition: box-shadow 0.3s ease;
