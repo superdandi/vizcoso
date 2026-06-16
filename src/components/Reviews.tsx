@@ -31,7 +31,7 @@ export default function Reviews() {
                 ))}
               </div>
 
-              <p className="mb-4 flex-1 text-sm leading-relaxed text-[#c0c0d0]">
+              <p className="mb-4 flex-1 text-sm leading-relaxed text-body">
                 &ldquo;{r.text}&rdquo;
               </p>
 
