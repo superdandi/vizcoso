@@ -14,7 +14,8 @@
   --color-text-dim: #8888aa;
   --color-border: #2a2a4a;
 
-  --font-sans: "Rajdhani", "Inter", "Segoe UI", system-ui, sans-serif;
+  --font-sans: "Inter", "Segoe UI", system-ui, sans-serif;
+  --font-heading: "Rajdhani", "Inter", sans-serif;
   --font-mono: "VT323", "Courier New", monospace;
 }
 
@@ -24,6 +25,10 @@
     scroll-behavior: smooth;
     background-color: var(--color-bg);
     color: var(--color-text);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
   }
 
   ::selection {
