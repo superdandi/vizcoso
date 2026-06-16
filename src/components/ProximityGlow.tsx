@@ -33,7 +33,9 @@ export default function ProximityGlow() {
           const freq = 0.3 + t * 3.7;
           const rawPulse = Math.sin(now * 0.001 * freq * Math.PI * 2);
           const halfWave = Math.max(0, rawPulse);
-          const pulseBoost = Math.pow(halfWave, 4) * 0.6 * t;
+          const sharpPulse = Math.pow(halfWave, 8);
+          const shockRing = Math.pow(halfWave, 14);
+          const pulseBoost = sharpPulse * 1.5 * t * t;
           const envelope = s + pulseBoost;
           const haloWave = Math.max(0, Math.sin((now * 0.001 * freq * Math.PI * 2) + 0.3));
           const haloPulse = Math.pow(haloWave, 8);
@@ -42,7 +44,8 @@ export default function ProximityGlow() {
             inset 0 0 ${8 * envelope}px rgba(255, 0, 255, ${0.04 * envelope}),
             0 ${8 * envelope}px ${35 * envelope}px rgba(255, 0, 255, ${0.2 * envelope}),
             0 0 ${25 * envelope}px rgba(255, 0, 255, ${0.1 * envelope}),
-            0 0 ${50 * t * t * haloPulse}px rgba(255, 0, 255, ${0.3 * t * t * haloPulse})
+            0 0 ${50 * t * t * haloPulse}px rgba(255, 0, 255, ${0.3 * t * t * haloPulse}),
+            0 0 ${80 * t * t * t * shockRing}px rgba(255, 0, 255, ${0.15 * t * t * t * shockRing})
           `;
         } else {
           card.style.boxShadow = `
