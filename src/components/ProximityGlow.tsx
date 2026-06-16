@@ -30,15 +30,20 @@ export default function ProximityGlow() {
         const s = t * GLOW_FACTOR;
 
         if (card.classList.contains('card-glass-pulse')) {
-          const hueSpeed = 0.06 + t * 0.12;
-          const hue = (now * hueSpeed + 300) % 360;
-          const flicker = (1 - t * 0.3) + Math.sin(now * 0.013) * t * 0.3;
+          const freq = 0.3 + t * 3.7;
+          const rawPulse = Math.sin(now * 0.001 * freq * Math.PI * 2);
+          const halfWave = Math.max(0, rawPulse);
+          const pulse = Math.pow(halfWave, 4);
+          const glowFloor = 0.05;
+          const glowCeiling = t * GLOW_FACTOR;
+          const envelope = glowFloor + pulse * (glowCeiling - glowFloor);
+          const haloPulse = Math.pow(Math.max(0, Math.sin((now * 0.001 * freq * Math.PI * 2) + 0.3)), 8);
           card.style.boxShadow = `
-            0 0 ${10 * s}px hsla(${hue}, 100%, 55%, ${0.15 * s * flicker}),
-            inset 0 0 ${8 * s}px hsla(${hue}, 100%, 55%, ${0.04 * s * flicker}),
-            0 ${8 * s}px ${35 * s}px hsla(${hue}, 100%, 55%, ${0.2 * s * flicker}),
-            0 0 ${25 * s}px hsla(${hue}, 100%, 55%, ${0.1 * s * flicker}),
-            0 0 ${50 * t * t}px hsla(${hue}, 100%, 55%, ${0.3 * t * t * flicker})
+            0 0 ${10 * envelope}px rgba(255, 0, 255, ${0.15 * envelope}),
+            inset 0 0 ${8 * envelope}px rgba(255, 0, 255, ${0.04 * envelope}),
+            0 ${8 * envelope}px ${35 * envelope}px rgba(255, 0, 255, ${0.2 * envelope}),
+            0 0 ${25 * envelope}px rgba(255, 0, 255, ${0.1 * envelope}),
+            0 0 ${50 * t * t * haloPulse}px rgba(255, 0, 255, ${0.3 * t * t * haloPulse})
           `;
         } else {
           card.style.boxShadow = `
