@@ -25,13 +25,13 @@ export default function VideoProduccion() {
                 {v.title}
               </h3>
               {v.features ? (
-                <ul className="mb-3 space-y-1 text-sm leading-relaxed text-body">
+                <ul className="mb-3 space-y-1 text-xs leading-relaxed text-body">
                   {v.features.map((f, j) => (
                     <li key={j}>{"\u2022"} {f}</li>
                   ))}
                 </ul>
               ) : (
-                <p className="mb-3 text-sm text-body">{v.description}</p>
+                <p className="mb-3 text-xs text-body">{v.description}</p>
               )}
               {v.note && (
                 <p className="mb-2 text-xs italic text-[#ffaa00]">{v.note}</p>

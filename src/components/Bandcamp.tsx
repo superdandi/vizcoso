@@ -84,7 +84,7 @@ export default function Bandcamp() {
         <p className="mb-2 text-[#8888aa]">
           Identidad propia, libertad creativa
         </p>
-        <p className="mb-10 text-sm text-body">
+        <p className="mb-10 text-xs text-body">
           Sello musical enfocado en la producción independiente. Distribuimos y promovemos el trabajo de artistas emergentes con identidad propia y libertad creativa.
         </p>
         <p className="mb-10 text-xs text-[#ffaa00] tracking-wide">

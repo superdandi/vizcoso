@@ -1,13 +1,13 @@
 export default function Footer() {
   return (
-    <footer className="relative z-[1] px-4 py-12">
+    <footer className="relative z-[1] px-4 pt-12 pb-16">
       <div className="mx-auto max-w-4xl text-center">
         <div className="mb-8 flex justify-center gap-4">
           <a
             href="https://youtube.com/@vizcoso"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm text-body transition-all hover:border-[#ff00ff]/50 hover:text-[#ff00ff]"
+            className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm text-[#c0c0d0] transition-all hover:border-[#ff00ff]/50 hover:text-[#ff00ff]"
             aria-label="YouTube"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -19,7 +19,7 @@ export default function Footer() {
             href="https://vizcosoentertainment.bandcamp.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm text-body transition-all hover:border-[#ff00ff]/50 hover:text-[#ff00ff]"
+            className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm text-[#c0c0d0] transition-all hover:border-[#ff00ff]/50 hover:text-[#ff00ff]"
             aria-label="Bandcamp"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -31,7 +31,7 @@ export default function Footer() {
             href="https://twitch.tv/vizcoso"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm text-body transition-all hover:border-[#ff00ff]/50 hover:text-[#ff00ff]"
+            className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm text-[#c0c0d0] transition-all hover:border-[#ff00ff]/50 hover:text-[#ff00ff]"
             aria-label="Twitch"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -43,7 +43,7 @@ export default function Footer() {
             href="https://instagram.com/vizcosoentertainment"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm text-body transition-all hover:border-[#ff00ff]/50 hover:text-[#ff00ff]"
+            className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm text-[#c0c0d0] transition-all hover:border-[#ff00ff]/50 hover:text-[#ff00ff]"
             aria-label="Instagram"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -56,7 +56,7 @@ export default function Footer() {
           href="https://maps.google.com?q=Vizcoso+Entertainment+Talca"
           target="_blank"
           rel="noopener noreferrer"
-          className="mb-6 inline-flex items-center gap-2 rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm px-4 py-2 text-sm text-body transition-all hover:border-[#ff00ff]/50 hover:text-[#ff00ff]"
+          className="mb-6 inline-flex items-center gap-2 rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm px-4 py-2 text-sm text-[#c0c0d0] transition-all hover:border-[#ff00ff]/50 hover:text-[#ff00ff]"
         >
           <svg
             width="16"

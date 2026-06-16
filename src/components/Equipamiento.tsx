@@ -27,7 +27,7 @@ export default function Equipamiento() {
               <h3 className="text-xl font-bold text-[#00ffff]">
                 Tascam Model 24
               </h3>
-              <ul className="mt-2 space-y-1 text-sm leading-relaxed text-body">
+              <ul className="mt-2 space-y-1 text-xs leading-relaxed text-body">
                 <li>{"\u2022"} Interfaz USB Tascam Model 24 → Mac Mini M4</li>
                 <li>{"\u2022"} 24 canales — 44.1/48 kHz, 24-bit</li>
                 <li>{"\u2022"} Lexicon MX200 (multiefectos externo)</li>
@@ -49,7 +49,7 @@ export default function Equipamiento() {
               </svg>
               Vocal &amp; Instrumento
             </h4>
-            <ul className="space-y-1 text-sm leading-relaxed text-body">
+            <ul className="space-y-1 text-xs leading-relaxed text-body">
               <li>{"\u2022"} Shure SM58 ×3, PG58, Shure 8700 (dinámicos)</li>
               <li>{"\u2022"} t.bone Nova Black (condensador vocal)</li>
               <li>{"\u2022"} Cajas DI: Samson MD1, Samson MDA1, Arctic DB-02</li>
@@ -67,7 +67,7 @@ export default function Equipamiento() {
               </svg>
               Batería completa
             </h4>
-            <ul className="space-y-1 text-sm leading-relaxed text-body">
+            <ul className="space-y-1 text-xs leading-relaxed text-body">
               <li>{"\u2022"} Shure PGADrumKit 7 completo</li>
               <li>{"\u2022"} PGA52 (kick), PGA57 (snare)</li>
               <li>{"\u2022"} PGA56×3 (toms)</li>
@@ -85,7 +85,7 @@ export default function Equipamiento() {
               </svg>
               Banda completa
             </h4>
-            <ul className="space-y-1 text-sm leading-relaxed text-body">
+            <ul className="space-y-1 text-xs leading-relaxed text-body">
               <li>{"\u2022"} Tascam Model 24 — 24 canales simultáneos</li>
               <li>{"\u2022"} Shure PGADrumKit 7 (kick, snare, toms, OH)</li>
               <li>{"\u2022"} Shure SM58 ×3 + Nova Black + condensadores para voces</li>
@@ -103,7 +103,7 @@ export default function Equipamiento() {
               </svg>
               Banda + Live Streaming
             </h4>
-            <ul className="space-y-1 text-sm leading-relaxed text-body">
+            <ul className="space-y-1 text-xs leading-relaxed text-body">
               <li>{"\u2022"} Tascam Model 24 vía USB al Mac Mini M4</li>
               <li>{"\u2022"} Fibra óptica simétrica — 940 Mbps (Fibra Gamer)</li>
               <li>{"\u2022"} Streaming multicanal en tiempo real</li>
