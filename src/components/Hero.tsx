@@ -28,8 +28,9 @@ export default function Hero() {
           </span>
         </h1>
 
-        <div className="mt-3 flex justify-center">
-          <span className="font-mono text-xs tracking-wider text-[#ffaa00] glitch-text" data-text="5.0">5.0</span>
+        <div className="mt-3 flex flex-col items-center gap-1">
+          <span className="glitch-text text-xs tracking-[0.3em] text-[#ffaa00]" data-text="★★★★★">★★★★★</span>
+          <span className="glitch-text font-mono text-xs text-[#ffaa00]" data-text="5.0">5.0</span>
         </div>
 
         <p className="mt-4 max-w-xl text-lg text-[#8888aa]">

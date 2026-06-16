@@ -57,6 +57,7 @@ export default function Navbar() {
             <button
               key={s.id}
               onClick={() => scrollTo(s.id)}
+              data-text={s.label}
               className={`transition-all duration-300 ${
                 activeSection === s.id
                   ? "glow-magenta text-white"
@@ -84,6 +85,7 @@ export default function Navbar() {
               <button
                 key={s.id}
                 onClick={() => scrollTo(s.id)}
+                data-text={s.label}
                 className={`text-left transition-all duration-300 ${
                   activeSection === s.id
                     ? "glow-magenta text-white"
