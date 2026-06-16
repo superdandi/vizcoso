@@ -1,11 +1,3 @@
-function StarSVG() {
-  return (
-    <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="#ffaa00">
-      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-    </svg>
-  );
-}
-
 export default function Hero() {
   return (
     <section
@@ -37,8 +29,9 @@ export default function Hero() {
         </h1>
 
         <div className="mt-3 flex justify-center">
-          <span className="inline-flex items-center gap-0.5 rounded border border-[#2a2a4a] bg-black/30 backdrop-blur-sm px-2.5 py-1">
-            <StarSVG /><StarSVG /><StarSVG /><StarSVG /><StarSVG />
+          <span className="inline-flex items-center gap-2 rounded border border-[#2a2a4a] bg-black/30 backdrop-blur-sm px-2.5 py-1">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#00ff88]" />
+            <span className="font-mono text-xs text-[#ffaa00]">5.0</span>
           </span>
         </div>
 
