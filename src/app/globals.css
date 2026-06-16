@@ -336,7 +336,7 @@
   transition: opacity 0.3s ease;
 }
 .nav-link:hover {
-  color: #e0e0e0;
+  color: #ffaa00;
 }
 .nav-link:hover::before {
   opacity: 1;
