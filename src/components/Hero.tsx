@@ -1,3 +1,11 @@
+function StarSVG() {
+  return (
+    <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="#ffaa00">
+      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+    </svg>
+  );
+}
+
 export default function Hero() {
   return (
     <section
@@ -28,6 +36,12 @@ export default function Hero() {
           </span>
         </h1>
 
+        <div className="mt-3 flex justify-center">
+          <span className="inline-flex items-center gap-0.5 rounded border border-[#2a2a4a] bg-black/30 backdrop-blur-sm px-2.5 py-1">
+            <StarSVG /><StarSVG /><StarSVG /><StarSVG /><StarSVG />
+          </span>
+        </div>
+
         <p className="mt-4 max-w-xl text-lg text-[#8888aa]">
           Estudio de grabaci&oacute;n &bull; Salas de ensayo &bull; Formaci&oacute;n musical
         </p>
@@ -45,13 +59,6 @@ export default function Hero() {
           >
             Agenda tu sesi&oacute;n
           </a>
-        </div>
-
-        <div className="mt-6 flex justify-center">
-          <span className="inline-flex items-center gap-1.5 rounded border border-[#2a2a4a] bg-black/30 backdrop-blur-sm px-3 py-1.5 text-xs">
-            <span className="text-[#ffaa00]">&starf;&starf;&starf;&starf;&starf;</span>
-            <span className="text-[#666]">8 opiniones</span>
-          </span>
         </div>
       </div>
 
