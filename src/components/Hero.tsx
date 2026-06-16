@@ -28,11 +28,8 @@ export default function Hero() {
           </span>
         </h1>
 
-        <div className="mt-3 flex items-center justify-center gap-2">
-          <div className="h-1.5 w-28 overflow-hidden rounded-full border border-[#2a2a4a] bg-[#0a0a0f]">
-            <div className="h-full w-full rounded-full bg-gradient-to-r from-[#00ffff] to-[#ff00ff]" />
-          </div>
-          <span className="font-mono text-[10px] text-[#666]">5.0</span>
+        <div className="mt-3 flex justify-center">
+          <span className="font-mono text-xs tracking-wider text-[#ffaa00] glitch-text" data-text="5.0">5.0</span>
         </div>
 
         <p className="mt-4 max-w-xl text-lg text-[#8888aa]">
