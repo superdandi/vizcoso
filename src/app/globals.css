@@ -398,6 +398,9 @@
 .card-glass-pulse {
   animation: card-pulse 4s infinite ease-in-out;
 }
+.card-glass-plain::after {
+  display: none;
+}
 .card-glow {
   transition: box-shadow 0.3s ease;
 }
