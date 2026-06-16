@@ -29,9 +29,8 @@ export default function Hero() {
         </h1>
 
         <div className="mt-3 flex justify-center">
-          <span className="inline-flex items-center gap-2 rounded border border-[#2a2a4a] bg-black/30 backdrop-blur-sm px-2.5 py-1">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#00ff88]" />
-            <span className="font-mono text-xs text-[#ffaa00]">5.0</span>
+          <span className="font-mono rounded border border-[#2a2a4a] bg-black/30 backdrop-blur-sm px-2 py-0.5 text-xs text-[#ffaa00]">
+            5.0
           </span>
         </div>
 
