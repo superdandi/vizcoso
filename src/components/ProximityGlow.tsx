@@ -30,13 +30,15 @@ export default function ProximityGlow() {
         const s = t * GLOW_FACTOR;
 
         if (card.classList.contains('card-glass-pulse')) {
-          const hue = (now * 0.06 + 300) % 360;
-          const flicker = 0.85 + Math.sin(now * 0.013) * 0.15;
+          const hueSpeed = 0.06 + t * 0.12;
+          const hue = (now * hueSpeed + 300) % 360;
+          const flicker = (1 - t * 0.3) + Math.sin(now * 0.013) * t * 0.3;
           card.style.boxShadow = `
             0 0 ${10 * s}px hsla(${hue}, 100%, 55%, ${0.15 * s * flicker}),
             inset 0 0 ${8 * s}px hsla(${hue}, 100%, 55%, ${0.04 * s * flicker}),
             0 ${8 * s}px ${35 * s}px hsla(${hue}, 100%, 55%, ${0.2 * s * flicker}),
-            0 0 ${25 * s}px hsla(${hue}, 100%, 55%, ${0.1 * s * flicker})
+            0 0 ${25 * s}px hsla(${hue}, 100%, 55%, ${0.1 * s * flicker}),
+            0 0 ${50 * t * t}px hsla(${hue}, 100%, 55%, ${0.3 * t * t * flicker})
           `;
         } else {
           card.style.boxShadow = `
