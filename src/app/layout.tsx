@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Inter, Rajdhani, VT323 } from "next/font/google";
+import { Exo_2, Rajdhani, VT323 } from "next/font/google";
 import { cn } from "@/lib/utils";
 import DigitalRain from "@/components/DigitalRain";
 import ProximityGlow from "@/components/ProximityGlow";
 
-const inter = Inter({subsets:['latin'],variable:'--font-sans'});
+const exo2 = Exo_2({subsets:['latin'],variable:'--font-sans'});
 const rajdhani = Rajdhani({subsets:['latin'],weight:['300','400','500','600','700'],variable:'--font-heading'});
 const vt323 = VT323({subsets:['latin'],weight:'400',variable:'--font-mono'});
 
@@ -29,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es" className={cn("scroll-smooth", "font-sans", inter.variable, rajdhani.variable, vt323.variable, "dark")}>
+    <html lang="es" className={cn("scroll-smooth", "font-sans", exo2.variable, rajdhani.variable, vt323.variable, "dark")}>
       <body className="scanline-overlay antialiased">
         <DigitalRain />
         <ProximityGlow />
