@@ -61,7 +61,7 @@ export default function Navbar() {
 
     if (id === "clases") {
       if (!clasesMode) {
-        setActiveSection("");
+        setActiveSection("clases");
         setClasesMode(true);
         history.replaceState(null, "", "/?view=clases");
         window.scrollTo(0, 0);
