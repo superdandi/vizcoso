@@ -34,10 +34,15 @@ export default function DigitalRain() {
     let animId: number;
     let drops: Drop[] = [];
     let contactTop = 0;
+    let noScroll = false;
 
     function updateContactTop() {
       const el = document.getElementById("contacto");
       contactTop = el ? el.offsetTop : document.documentElement.scrollHeight;
+    }
+
+    function checkScroll() {
+      noScroll = document.documentElement.scrollHeight <= window.innerHeight;
     }
 
     function initDrops(w: number, h: number) {
@@ -55,7 +60,7 @@ export default function DigitalRain() {
     }
 
     function draw(w: number, h: number) {
-      const progress = Math.min(window.scrollY / Math.max(contactTop, 1), 1);
+      const progress = noScroll ? 0.5 : Math.min(window.scrollY / Math.max(contactTop, 1), 1);
       const intensity = progress * 0.16;
 
       const fillAlpha = 0.05 - intensity * 0.015;
@@ -113,6 +118,7 @@ export default function DigitalRain() {
     canvasEl.width = w;
     canvasEl.height = h;
     updateContactTop();
+    checkScroll();
     initDrops(w, h);
     draw(w, h);
 
@@ -122,6 +128,7 @@ export default function DigitalRain() {
       canvasEl.width = w;
       canvasEl.height = h;
       updateContactTop();
+      checkScroll();
     }
 
     window.addEventListener("resize", onResize);

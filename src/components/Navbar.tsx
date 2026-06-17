@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname, useRouter } from "next/navigation";
 
 const sections = [
   { id: "servicios", label: "Servicios" },
@@ -15,6 +16,9 @@ const sections = [
 ];
 
 export default function Navbar() {
+  const pathname = usePathname();
+  const router = useRouter();
+  const isLanding = pathname === "/";
   const [open, setOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
@@ -38,6 +42,17 @@ export default function Navbar() {
 
   const scrollTo = (id: string) => {
     setOpen(false);
+
+    if (id === "clases" && isLanding) {
+      router.push("/clases");
+      return;
+    }
+
+    if (!isLanding) {
+      router.push("/#" + id);
+      return;
+    }
+
     setActiveSection(id);
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
