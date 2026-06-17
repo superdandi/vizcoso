@@ -33,7 +33,7 @@ export default function Hero() {
           <span className="glitch-text font-mono text-xs text-[#ffaa00]" data-text="5.0">5.0</span>
         </div>
 
-        <p className="mt-4 max-w-xl font-mono text-sm tracking-[0.3em] text-[#8888aa]">
+        <p className="mt-4 max-w-xl font-mono text-sm uppercase tracking-[0.2em] text-[#8888aa]">
           Estudio de grabaci&oacute;n &bull; Salas de ensayo &bull; Formaci&oacute;n musical
         </p>
 
