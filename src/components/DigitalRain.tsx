@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 const KATAKANA = "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン";
 const ASCII = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789<>/{}[]|&^%$#@!";
@@ -18,10 +19,21 @@ interface Drop {
   chars: string[];
 }
 
+type RainMode = "scroll" | "fixed" | "auto";
+
+const PAGE_MODE: Record<string, RainMode> = {
+  "/": "scroll",
+  "/clases": "fixed",
+};
+
+let saved: { y: number; speed: number; length: number; chars: string[] }[] | null = null;
+
 const FONT_SIZE = 14;
 
 export default function DigitalRain() {
+  const pathname = usePathname();
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const mode: RainMode = PAGE_MODE[pathname] || "auto";
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -34,19 +46,33 @@ export default function DigitalRain() {
     let animId: number;
     let drops: Drop[] = [];
     let contactTop = 0;
-    let noScroll = false;
 
     function updateContactTop() {
       const el = document.getElementById("contacto");
       contactTop = el ? el.offsetTop : document.documentElement.scrollHeight;
     }
 
-    function checkScroll() {
-      noScroll = document.documentElement.scrollHeight <= window.innerHeight;
+    function progress(): number {
+      if (mode === "fixed") return 0.5;
+      if (mode === "scroll") return Math.min(window.scrollY / Math.max(contactTop, 1), 1);
+      const noScroll = document.documentElement.scrollHeight <= window.innerHeight;
+      return noScroll ? 0.5 : Math.min(window.scrollY / Math.max(contactTop, 1), 1);
     }
 
     function initDrops(w: number, h: number) {
       const cols = Math.floor(w / FONT_SIZE);
+      if (saved && saved.length === cols) {
+        drops = saved.map((d, i) => ({
+          x: i * FONT_SIZE,
+          y: d.y,
+          speed: d.speed,
+          length: d.length,
+          chars: [...d.chars],
+        }));
+        saved = null;
+        return;
+      }
+      saved = null;
       drops = Array.from({ length: cols }, (_, i) => {
         const len = 8 + Math.floor(Math.random() * 9);
         return {
@@ -60,8 +86,8 @@ export default function DigitalRain() {
     }
 
     function draw(w: number, h: number) {
-      const progress = noScroll ? 0.5 : Math.min(window.scrollY / Math.max(contactTop, 1), 1);
-      const intensity = progress * 0.16;
+      const p = progress();
+      const intensity = p * 0.16;
 
       const fillAlpha = 0.05 - intensity * 0.015;
       c.fillStyle = `rgba(10, 10, 15, ${fillAlpha})`;
@@ -118,7 +144,6 @@ export default function DigitalRain() {
     canvasEl.width = w;
     canvasEl.height = h;
     updateContactTop();
-    checkScroll();
     initDrops(w, h);
     draw(w, h);
 
@@ -128,16 +153,21 @@ export default function DigitalRain() {
       canvasEl.width = w;
       canvasEl.height = h;
       updateContactTop();
-      checkScroll();
     }
 
     window.addEventListener("resize", onResize);
 
     return () => {
+      saved = drops.map((d) => ({
+        y: d.y,
+        speed: d.speed,
+        length: d.length,
+        chars: d.chars,
+      }));
       cancelAnimationFrame(animId);
       window.removeEventListener("resize", onResize);
     };
-  }, []);
+  }, [mode]);
 
   return (
     <canvas
