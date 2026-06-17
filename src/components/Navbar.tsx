@@ -15,6 +15,10 @@ const sections = [
   { id: "contacto", label: "Contacto" },
 ];
 
+function inClasesView() {
+  return typeof window !== "undefined" && window.location.search.includes("view=clases");
+}
+
 export default function Navbar() {
   const pathname = usePathname();
   const router = useRouter();
@@ -23,6 +27,8 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
+    if (!isLanding) return;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -38,17 +44,17 @@ export default function Navbar() {
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [isLanding]);
 
   const scrollTo = (id: string) => {
     setOpen(false);
 
-    if (id === "clases" && isLanding) {
-      router.push("/clases");
+    if (id === "clases") {
+      if (!inClasesView()) router.push("/?view=clases");
       return;
     }
 
-    if (!isLanding) {
+    if (inClasesView()) {
       router.push("/#" + id);
       return;
     }
@@ -61,7 +67,11 @@ export default function Navbar() {
     <nav className="fixed top-0 z-50 w-full border-b border-[#2a2a4a] bg-[#0a0a0f]/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         <button
-          onClick={() => scrollTo("hero")}
+          onClick={() => {
+            setOpen(false);
+            if (inClasesView()) router.push("/");
+            else document.getElementById("hero")?.scrollIntoView({ behavior: "smooth" });
+          }}
           className="glow-magenta text-lg font-bold tracking-widest"
         >
           VIZCOSO

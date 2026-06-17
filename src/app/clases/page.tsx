@@ -1,5 +1,12 @@
-import Clases from "@/components/Clases";
+"use client";
+
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 export default function ClasesPage() {
-  return <Clases />;
+  const router = useRouter();
+  useEffect(() => {
+    router.replace("/?view=clases");
+  }, [router]);
+  return null;
 }
