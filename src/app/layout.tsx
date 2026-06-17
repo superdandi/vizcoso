@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Exo_2, Rajdhani, VT323 } from "next/font/google";
 import { cn } from "@/lib/utils";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import DigitalRain from "@/components/DigitalRain";
 import ProximityGlow from "@/components/ProximityGlow";
 import SoundEffects from "@/components/SoundEffects";
@@ -35,7 +37,9 @@ export default function RootLayout({
         <DigitalRain />
         <ProximityGlow />
         <SoundEffects />
-        {children}
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
