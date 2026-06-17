@@ -15,13 +15,13 @@ export function playHoverEnter() {
   const gain = c.createGain();
   osc.connect(gain);
   gain.connect(c.destination);
-  osc.type = "sine";
-  osc.frequency.setValueAtTime(500, c.currentTime);
-  osc.frequency.exponentialRampToValueAtTime(1200, c.currentTime + 0.1);
+  osc.type = "square";
+  osc.frequency.setValueAtTime(150, c.currentTime);
+  osc.frequency.exponentialRampToValueAtTime(350, c.currentTime + 0.06);
   gain.gain.setValueAtTime(0.06, c.currentTime);
-  gain.gain.exponentialRampToValueAtTime(0.001, c.currentTime + 0.1);
+  gain.gain.exponentialRampToValueAtTime(0.001, c.currentTime + 0.06);
   osc.start(c.currentTime);
-  osc.stop(c.currentTime + 0.1);
+  osc.stop(c.currentTime + 0.06);
 }
 
 export function playHoverLeave() {
@@ -30,13 +30,13 @@ export function playHoverLeave() {
   const gain = c.createGain();
   osc.connect(gain);
   gain.connect(c.destination);
-  osc.type = "sine";
-  osc.frequency.setValueAtTime(800, c.currentTime);
-  osc.frequency.exponentialRampToValueAtTime(300, c.currentTime + 0.08);
+  osc.type = "square";
+  osc.frequency.setValueAtTime(250, c.currentTime);
+  osc.frequency.exponentialRampToValueAtTime(80, c.currentTime + 0.05);
   gain.gain.setValueAtTime(0.04, c.currentTime);
-  gain.gain.exponentialRampToValueAtTime(0.001, c.currentTime + 0.08);
+  gain.gain.exponentialRampToValueAtTime(0.001, c.currentTime + 0.05);
   osc.start(c.currentTime);
-  osc.stop(c.currentTime + 0.08);
+  osc.stop(c.currentTime + 0.05);
 }
 
 export function playClick() {
