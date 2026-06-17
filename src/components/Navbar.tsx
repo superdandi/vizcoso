@@ -8,7 +8,7 @@ const sections = [
   { id: "equipamiento", label: "Equipamiento" },
   { id: "sala-ensayo", label: "Sala de Ensayo" },
   { id: "video", label: "Video" },
-  { id: "clases", label: "Clases" },
+  { id: "formacion", label: "Formación" },
   { id: "reviews", label: "Opiniones" },
   { id: "bandcamp", label: "Sello" },
   { id: "contacto", label: "Contacto" },
@@ -19,24 +19,24 @@ export default function Navbar() {
   const isLanding = pathname === "/";
   const [open, setOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
-  const [clasesMode, setClasesMode] = useState(false);
+  const [formacionMode, setFormacionMode] = useState(false);
 
   useEffect(() => {
-    setClasesMode(window.location.search.includes("view=clases"));
-    if (window.location.search.includes("view=clases"))
-      document.body.classList.add("clases-mode");
+    setFormacionMode(window.location.search.includes("view=formacion"));
+    if (window.location.search.includes("view=formacion"))
+      document.body.classList.add("formacion-mode");
   }, []);
 
   useEffect(() => {
-    if (clasesMode) {
-      document.body.classList.add("clases-mode");
+    if (formacionMode) {
+      document.body.classList.add("formacion-mode");
     } else {
-      document.body.classList.remove("clases-mode");
+      document.body.classList.remove("formacion-mode");
     }
-  }, [clasesMode]);
+  }, [formacionMode]);
 
   useEffect(() => {
-    if (!isLanding || clasesMode) return;
+    if (!isLanding || formacionMode) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -53,24 +53,24 @@ export default function Navbar() {
     });
 
     return () => observer.disconnect();
-  }, [isLanding, clasesMode]);
+  }, [isLanding, formacionMode]);
 
   const scrollTo = (id: string) => {
     setOpen(false);
 
-    if (id === "clases") {
-      if (!clasesMode) {
-        setActiveSection("clases");
-        setClasesMode(true);
-        history.replaceState(null, "", "/?view=clases");
+    if (id === "formacion") {
+      if (!formacionMode) {
+        setActiveSection("formacion");
+        setFormacionMode(true);
+        history.replaceState(null, "", "/?view=formacion");
         window.scrollTo(0, 0);
       }
       return;
     }
 
-    if (clasesMode) {
+    if (formacionMode) {
       setActiveSection(id);
-      setClasesMode(false);
+      setFormacionMode(false);
       history.replaceState(null, "", "/#" + id);
       requestAnimationFrame(() => {
         document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -88,8 +88,8 @@ export default function Navbar() {
         <button
           onClick={() => {
             setOpen(false);
-            if (clasesMode) {
-              setClasesMode(false);
+            if (formacionMode) {
+              setFormacionMode(false);
               history.replaceState(null, "", "/");
             }
             setActiveSection("");

@@ -1,9 +1,9 @@
 import AnimateOnScroll from "@/components/AnimateOnScroll";
-import { clasesMusica } from "@/data/services";
+import { formacionMusica } from "@/data/services";
 
-export default function Clases() {
+export default function Formacion() {
   return (
-    <section id="clases" className="scroll-mt-14 border-t border-[#2a2a4a] px-4 py-24">
+    <section id="formacion" className="scroll-mt-14 border-t border-[#2a2a4a] px-4 py-24">
       <AnimateOnScroll>
       <div className="mx-auto max-w-4xl">
         <h2 className="mb-2 text-center text-3xl font-bold sm:text-4xl">
@@ -16,7 +16,7 @@ export default function Clases() {
         </p>
 
         <div className="card-glass card-glow overflow-hidden rounded-lg border border-[#2a2a4a]">
-          {clasesMusica.map((c, i) => (
+          {formacionMusica.map((c, i) => (
             <div
               key={i}
               className={`card-fade-up flex items-center justify-between backdrop-blur-sm px-6 py-4 ${

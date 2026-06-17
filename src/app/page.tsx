@@ -7,7 +7,7 @@ import Reviews from "@/components/Reviews";
 import Bandcamp from "@/components/Bandcamp";
 import Contacto from "@/components/Contacto";
 import SobreMi from "@/components/SobreMi";
-import Clases from "@/components/Clases";
+import Formacion from "@/components/Formacion";
 
 export default function Home() {
   return (
@@ -23,8 +23,8 @@ export default function Home() {
         <Contacto />
         <SobreMi />
       </div>
-      <div id="clases-content">
-        <Clases />
+      <div id="formacion-content">
+        <Formacion />
       </div>
     </>
   );

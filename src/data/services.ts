@@ -58,7 +58,7 @@ export const salaEnsayo = {
   unit: "/ hora",
 };
 
-export const clasesMusica: ClassItem[] = [
+export const formacionMusica: ClassItem[] = [
   { name: "Canto", price: "$25.000 CLP" },
   { name: "Guitarra", price: "$15.000 CLP" },
   { name: "Piano", price: "$15.000 CLP" },

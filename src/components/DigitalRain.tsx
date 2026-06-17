@@ -20,7 +20,7 @@ interface Drop {
 }
 
 const PAGE_FIXED: Record<string, number> = {
-  "/clases": 0.65,
+  "/formacion": 0.65,
 };
 
 const FONT_SIZE = 14;
