@@ -12,7 +12,6 @@ const sections = [
   { id: "reviews", label: "Opiniones" },
   { id: "bandcamp", label: "Sello" },
   { id: "contacto", label: "Contacto" },
-  { id: "sobre-mi", label: "Sobre Mí" },
 ];
 
 export default function Navbar() {
