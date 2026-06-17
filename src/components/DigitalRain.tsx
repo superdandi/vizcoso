@@ -19,11 +19,8 @@ interface Drop {
   chars: string[];
 }
 
-type RainMode = "scroll" | "fixed" | "auto";
-
-const PAGE_MODE: Record<string, RainMode> = {
-  "/": "scroll",
-  "/clases": "fixed",
+const PAGE_FIXED: Record<string, number> = {
+  "/clases": 0.65,
 };
 
 const FONT_SIZE = 14;
@@ -33,7 +30,7 @@ let ctx: CanvasRenderingContext2D | null = null;
 let drops: Drop[] = [];
 let animId = 0;
 let running = false;
-let currentMode: RainMode = "auto";
+let currentPath: string = "/";
 let contactTop = 0;
 let w = 0;
 let h = 0;
@@ -44,8 +41,8 @@ function updateContactTop() {
 }
 
 function progress(): number {
-  if (currentMode === "fixed") return 0.5;
-  if (currentMode === "scroll") return Math.min(window.scrollY / Math.max(contactTop, 1), 1);
+  const fixed = PAGE_FIXED[currentPath];
+  if (fixed !== undefined) return fixed;
   const noScroll = document.documentElement.scrollHeight <= window.innerHeight;
   return noScroll ? 0.5 : Math.min(window.scrollY / Math.max(contactTop, 1), 1);
 }
@@ -120,10 +117,10 @@ function draw() {
   animId = requestAnimationFrame(draw);
 }
 
-function start(el: HTMLCanvasElement, mode: RainMode) {
+function start(el: HTMLCanvasElement, path: string) {
   canvas = el;
   ctx = el.getContext("2d");
-  currentMode = mode;
+  currentPath = path;
 
   w = window.innerWidth;
   h = window.innerHeight;
@@ -162,20 +159,19 @@ function onResize() {
 export default function DigitalRain() {
   const pathname = usePathname();
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const mode: RainMode = PAGE_MODE[pathname] || "auto";
 
   useEffect(() => {
     const el = canvasRef.current;
     if (!el) return;
 
-    start(el, mode);
+    start(el, pathname);
     window.addEventListener("resize", onResize);
 
     return () => {
       stop();
       window.removeEventListener("resize", onResize);
     };
-  }, [mode]);
+  }, [pathname]);
 
   return (
     <canvas
