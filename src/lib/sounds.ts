@@ -9,64 +9,54 @@ function getCtx(): AudioContext {
   return ctx;
 }
 
-export function playHoverEnter() {
+function burst(
+  freq: number,
+  freqEnd: number | null,
+  dur: number,
+  gain: number,
+  noiseDur: number,
+  noiseGain: number,
+) {
   const c = getCtx();
+  const now = c.currentTime;
+
   const osc = c.createOscillator();
-  const gain = c.createGain();
-  osc.connect(gain);
-  gain.connect(c.destination);
+  const g = c.createGain();
+  osc.connect(g);
+  g.connect(c.destination);
   osc.type = "square";
-  osc.frequency.setValueAtTime(150, c.currentTime);
-  osc.frequency.exponentialRampToValueAtTime(350, c.currentTime + 0.06);
-  gain.gain.setValueAtTime(0.06, c.currentTime);
-  gain.gain.exponentialRampToValueAtTime(0.001, c.currentTime + 0.06);
-  osc.start(c.currentTime);
-  osc.stop(c.currentTime + 0.06);
+  osc.frequency.setValueAtTime(freq, now);
+  if (freqEnd != null)
+    osc.frequency.exponentialRampToValueAtTime(freqEnd, now + dur);
+  g.gain.setValueAtTime(gain, now);
+  g.gain.exponentialRampToValueAtTime(0.001, now + dur);
+  osc.start(now);
+  osc.stop(now + dur);
+
+  if (noiseDur <= 0) return;
+  const sr = c.sampleRate;
+  const buf = c.createBuffer(1, sr * noiseDur, sr);
+  const ch = buf.getChannelData(0);
+  for (let i = 0; i < ch.length; i++) ch[i] = Math.random() * 2 - 1;
+  const src = c.createBufferSource();
+  const ng = c.createGain();
+  src.buffer = buf;
+  src.connect(ng);
+  ng.connect(c.destination);
+  ng.gain.setValueAtTime(noiseGain, now);
+  ng.gain.exponentialRampToValueAtTime(0.001, now + noiseDur);
+  src.start(now);
+  src.stop(now + noiseDur);
+}
+
+export function playHoverEnter() {
+  burst(200, null, 0.05, 0.1, 0.03, 0.06);
 }
 
 export function playHoverLeave() {
-  const c = getCtx();
-  const osc = c.createOscillator();
-  const gain = c.createGain();
-  osc.connect(gain);
-  gain.connect(c.destination);
-  osc.type = "square";
-  osc.frequency.setValueAtTime(250, c.currentTime);
-  osc.frequency.exponentialRampToValueAtTime(80, c.currentTime + 0.05);
-  gain.gain.setValueAtTime(0.04, c.currentTime);
-  gain.gain.exponentialRampToValueAtTime(0.001, c.currentTime + 0.05);
-  osc.start(c.currentTime);
-  osc.stop(c.currentTime + 0.05);
+  burst(250, 100, 0.04, 0.06, 0.02, 0.04);
 }
 
 export function playClick() {
-  const c = getCtx();
-
-  const osc = c.createOscillator();
-  const oscGain = c.createGain();
-  osc.connect(oscGain);
-  oscGain.connect(c.destination);
-  osc.type = "square";
-  osc.frequency.setValueAtTime(200, c.currentTime);
-  oscGain.gain.setValueAtTime(0.1, c.currentTime);
-  oscGain.gain.exponentialRampToValueAtTime(0.001, c.currentTime + 0.05);
-  osc.start(c.currentTime);
-  osc.stop(c.currentTime + 0.05);
-
-  const noiseLen = 0.03;
-  const sr = c.sampleRate;
-  const buf = c.createBuffer(1, sr * noiseLen, sr);
-  const data = buf.getChannelData(0);
-  for (let i = 0; i < data.length; i++) {
-    data[i] = Math.random() * 2 - 1;
-  }
-  const noise = c.createBufferSource();
-  const noiseGain = c.createGain();
-  noise.buffer = buf;
-  noise.connect(noiseGain);
-  noiseGain.connect(c.destination);
-  noiseGain.gain.setValueAtTime(0.06, c.currentTime);
-  noiseGain.gain.exponentialRampToValueAtTime(0.001, c.currentTime + noiseLen);
-  noise.start(c.currentTime);
-  noise.stop(c.currentTime + noiseLen);
+  burst(120, null, 0.08, 0.15, 0.05, 0.1);
 }
