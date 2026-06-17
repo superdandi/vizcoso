@@ -85,10 +85,10 @@ export default function Bandcamp() {
           Identidad propia, libertad creativa &mdash; Producci&oacute;n independiente desde Talca
         </p>
 
+        <div className="card-glass card-glass-action card-glow card-glass-pulse card-fade-up mx-auto max-w-[884px] rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm p-8">
         <Carousel
           opts={{ align: "center" }}
           setApi={setApi}
-          className="mx-auto max-w-[820px]"
         >
           <CarouselContent className="ml-0">
             {albums.map((a, i) => (
@@ -123,6 +123,7 @@ export default function Bandcamp() {
           </CarouselContent>
           <OverlayArrows />
         </Carousel>
+        </div>
 
         <a
           href="https://vizcosoentertainment.bandcamp.com"
