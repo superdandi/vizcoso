@@ -105,7 +105,7 @@ export default function SalaEnsayo() {
             {amenities.map((a) => (
               <div
                 key={a.label}
-                className="card-glass card-glow card-scale-in flex flex-col items-center gap-1 rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm px-2 py-3"
+                className="card-glass card-glow card-fade-up flex flex-col items-center gap-1 rounded-lg border border-[#2a2a4a] bg-black/30 backdrop-blur-sm px-2 py-3"
               >
                 <span className="flex items-center justify-center text-[#00ffff]">{a.icon}</span>
                 <span className="text-xs text-[#8888aa]">{a.label}</span>

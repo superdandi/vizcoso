@@ -3,7 +3,7 @@ import AnimateOnScroll from "@/components/AnimateOnScroll";
 export default function Equipamiento() {
   return (
     <section id="equipamiento" className="scroll-mt-14 border-t border-[#2a2a4a] px-4 py-24">
-      <AnimateOnScroll animation="scale-in">
+      <AnimateOnScroll>
       <div className="mx-auto max-w-4xl">
         <h2 className="mb-2 text-center text-3xl font-bold sm:text-4xl">
           <span data-text="Equipamiento de Grabación" className="glitch-text neon-title flicker-erratic glow-magenta">
