@@ -11,8 +11,8 @@ const sections = [
   { id: "video", label: "Video" },
   { id: "reviews", label: "Opiniones" },
   { id: "bandcamp", label: "Sello" },
-  { id: "sobre-mi", label: "Sobre Mí" },
   { id: "contacto", label: "Contacto" },
+  { id: "sobre-mi", label: "Sobre Mí" },
 ];
 
 export default function Navbar() {

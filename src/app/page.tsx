@@ -5,8 +5,8 @@ import SalaEnsayo from "@/components/SalaEnsayo";
 import VideoProduccion from "@/components/VideoProduccion";
 import Reviews from "@/components/Reviews";
 import Bandcamp from "@/components/Bandcamp";
-import SobreMi from "@/components/SobreMi";
 import Contacto from "@/components/Contacto";
+import SobreMi from "@/components/SobreMi";
 import Clases from "@/components/Clases";
 
 export default function Home() {
@@ -20,8 +20,8 @@ export default function Home() {
         <VideoProduccion />
         <Reviews />
         <Bandcamp />
-        <SobreMi />
         <Contacto />
+        <SobreMi />
       </div>
       <div id="clases-content">
         <Clases />
