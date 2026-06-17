@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 const sections = [
   { id: "sonido", label: "Sonido" },
   { id: "equipamiento", label: "Equipamiento" },
-  { id: "sala-ensayo", label: "Sala de Ensayo" },
+  { id: "sala-ensayo", label: "Ensayo" },
   { id: "video", label: "Video" },
   { id: "formacion", label: "Formación" },
   { id: "reviews", label: "Opiniones" },
