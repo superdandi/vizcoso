@@ -61,6 +61,7 @@ export default function Navbar() {
 
     if (id === "clases") {
       if (!clasesMode) {
+        setActiveSection("");
         setClasesMode(true);
         history.replaceState(null, "", "/?view=clases");
         window.scrollTo(0, 0);
@@ -69,6 +70,7 @@ export default function Navbar() {
     }
 
     if (clasesMode) {
+      setActiveSection(id);
       setClasesMode(false);
       history.replaceState(null, "", "/#" + id);
       requestAnimationFrame(() => {
@@ -91,6 +93,7 @@ export default function Navbar() {
               setClasesMode(false);
               history.replaceState(null, "", "/");
             }
+            setActiveSection("");
             document.getElementById("hero")?.scrollIntoView({ behavior: "smooth" });
           }}
           className="glow-magenta text-lg font-bold tracking-widest"
