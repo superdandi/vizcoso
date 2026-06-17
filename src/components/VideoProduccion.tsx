@@ -7,8 +7,8 @@ export default function VideoProduccion() {
       <AnimateOnScroll>
       <div className="mx-auto max-w-6xl">
         <h2 className="mb-2 text-center text-3xl font-bold sm:text-4xl">
-          <span data-text="Producción de Video" className="glitch-text neon-title flicker-erratic glow-magenta">
-            Producción de Video
+          <span data-text="Producción Audiovisual" className="glitch-text neon-title flicker-erratic glow-magenta">
+            Producción Audiovisual
           </span>
         </h2>
         <p className="mb-12 text-center text-[#8888aa]">

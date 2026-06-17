@@ -7,8 +7,8 @@ export default function Sonido() {
       <AnimateOnScroll>
         <div className="mx-auto max-w-6xl">
         <h2 className="mb-2 text-center text-3xl font-bold sm:text-4xl">
-          <span data-text="Servicios de Grabación" className="glitch-text neon-title flicker-erratic glow-cyan">
-            Servicios de Grabación
+          <span data-text="Producción Musical" className="glitch-text neon-title flicker-erratic glow-cyan">
+            Producción Musical
           </span>
         </h2>
         <p className="mb-12 text-center text-[#8888aa]">
