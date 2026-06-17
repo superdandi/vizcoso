@@ -1,0 +1,8 @@
+"use client";
+
+import useButtonSounds from "@/hooks/useButtonSounds";
+
+export default function SoundEffects() {
+  useButtonSounds(".card-glass-action, .card-glass-pulse");
+  return null;
+}

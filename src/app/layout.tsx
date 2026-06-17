@@ -4,6 +4,7 @@ import { Exo_2, Rajdhani, VT323 } from "next/font/google";
 import { cn } from "@/lib/utils";
 import DigitalRain from "@/components/DigitalRain";
 import ProximityGlow from "@/components/ProximityGlow";
+import SoundEffects from "@/components/SoundEffects";
 
 const exo2 = Exo_2({subsets:['latin'],variable:'--font-sans'});
 const rajdhani = Rajdhani({subsets:['latin'],weight:['300','400','500','600','700'],variable:'--font-heading'});
@@ -33,6 +34,7 @@ export default function RootLayout({
       <body className="scanline-overlay antialiased">
         <DigitalRain />
         <ProximityGlow />
+        <SoundEffects />
         {children}
       </body>
     </html>
