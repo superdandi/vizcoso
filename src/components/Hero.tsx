@@ -39,10 +39,10 @@ export default function Hero() {
 
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <a
-            href="#servicios"
+            href="#sonido"
             className="card-glass card-glass-action card-glow card-glass-pulse rounded border border-[#2a2a4a] bg-black/30 backdrop-blur-sm px-8 py-2 text-sm font-semibold text-[#ff00ff] transition-all hover:border-[#ff00ff]/50"
           >
-            Ver servicios
+            Ver Sonido
           </a>
           <a
             href="#contacto"

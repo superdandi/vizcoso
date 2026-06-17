@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
 const sections = [
-  { id: "servicios", label: "Servicios" },
+  { id: "sonido", label: "Sonido" },
   { id: "equipamiento", label: "Equipamiento" },
   { id: "sala-ensayo", label: "Sala de Ensayo" },
   { id: "clases", label: "Clases" },

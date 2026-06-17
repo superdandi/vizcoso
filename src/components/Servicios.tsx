@@ -3,7 +3,7 @@ import { serviciosGrabacion } from "@/data/services";
 
 export default function Servicios() {
   return (
-      <section id="servicios" className="scroll-mt-14 border-t border-[#2a2a4a] px-4 py-24">
+      <section id="sonido" className="scroll-mt-14 border-t border-[#2a2a4a] px-4 py-24">
       <AnimateOnScroll>
         <div className="mx-auto max-w-6xl">
         <h2 className="mb-2 text-center text-3xl font-bold sm:text-4xl">
