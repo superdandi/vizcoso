@@ -1,5 +1,5 @@
 import Hero from "@/components/Hero";
-import Servicios from "@/components/Servicios";
+import Sonido from "@/components/Sonido";
 import Equipamiento from "@/components/Equipamiento";
 import SalaEnsayo from "@/components/SalaEnsayo";
 import VideoProduccion from "@/components/VideoProduccion";
@@ -14,7 +14,7 @@ export default function Home() {
     <>
       <div id="landing-content">
         <Hero />
-        <Servicios />
+        <Sonido />
         <Equipamiento />
         <SalaEnsayo />
         <VideoProduccion />

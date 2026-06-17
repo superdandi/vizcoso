@@ -1,7 +1,7 @@
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { serviciosGrabacion } from "@/data/services";
 
-export default function Servicios() {
+export default function Sonido() {
   return (
       <section id="sonido" className="scroll-mt-14 border-t border-[#2a2a4a] px-4 py-24">
       <AnimateOnScroll>
