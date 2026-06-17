@@ -2,6 +2,10 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+#clases-content { display: none; }
+body.clases-mode #landing-content { display: none; }
+body.clases-mode #clases-content { display: block; }
+
 @custom-variant dark (&:is(.dark *));
 
 @theme {

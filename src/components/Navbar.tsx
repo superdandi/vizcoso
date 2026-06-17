@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 const sections = [
   { id: "servicios", label: "Servicios" },
@@ -15,19 +15,29 @@ const sections = [
   { id: "contacto", label: "Contacto" },
 ];
 
-function inClasesView() {
-  return typeof window !== "undefined" && window.location.search.includes("view=clases");
-}
-
 export default function Navbar() {
   const pathname = usePathname();
-  const router = useRouter();
   const isLanding = pathname === "/";
   const [open, setOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+  const [clasesMode, setClasesMode] = useState(false);
 
   useEffect(() => {
-    if (!isLanding) return;
+    setClasesMode(window.location.search.includes("view=clases"));
+    if (window.location.search.includes("view=clases"))
+      document.body.classList.add("clases-mode");
+  }, []);
+
+  useEffect(() => {
+    if (clasesMode) {
+      document.body.classList.add("clases-mode");
+    } else {
+      document.body.classList.remove("clases-mode");
+    }
+  }, [clasesMode]);
+
+  useEffect(() => {
+    if (!isLanding || clasesMode) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -44,18 +54,26 @@ export default function Navbar() {
     });
 
     return () => observer.disconnect();
-  }, [isLanding]);
+  }, [isLanding, clasesMode]);
 
   const scrollTo = (id: string) => {
     setOpen(false);
 
     if (id === "clases") {
-      if (!inClasesView()) router.push("/?view=clases");
+      if (!clasesMode) {
+        setClasesMode(true);
+        history.replaceState(null, "", "/?view=clases");
+        window.scrollTo(0, 0);
+      }
       return;
     }
 
-    if (inClasesView()) {
-      router.push("/#" + id);
+    if (clasesMode) {
+      setClasesMode(false);
+      history.replaceState(null, "", "/#" + id);
+      requestAnimationFrame(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      });
       return;
     }
 
@@ -69,8 +87,11 @@ export default function Navbar() {
         <button
           onClick={() => {
             setOpen(false);
-            if (inClasesView()) router.push("/");
-            else document.getElementById("hero")?.scrollIntoView({ behavior: "smooth" });
+            if (clasesMode) {
+              setClasesMode(false);
+              history.replaceState(null, "", "/");
+            }
+            document.getElementById("hero")?.scrollIntoView({ behavior: "smooth" });
           }}
           className="glow-magenta text-lg font-bold tracking-widest"
         >

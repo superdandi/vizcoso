@@ -1,12 +1,10 @@
 "use client";
 
 import { useEffect } from "react";
-import { useRouter } from "next/navigation";
 
 export default function ClasesPage() {
-  const router = useRouter();
   useEffect(() => {
-    router.replace("/?view=clases");
-  }, [router]);
+    window.location.replace("/?view=clases");
+  }, []);
   return null;
 }
